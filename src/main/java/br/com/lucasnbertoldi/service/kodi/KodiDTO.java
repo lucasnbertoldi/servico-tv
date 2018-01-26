@@ -7,5 +7,6 @@ public class KodiDTO {
     protected Integer playerID;
     protected String playerType;
     protected int windowID;
+    protected int speed;
 
 }

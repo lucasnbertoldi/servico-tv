@@ -18,7 +18,7 @@ public class ServicoLucasTV {
         ViewUtils.setarVisualPadrao();
 
         mainView = new MainView();
-        mainView.setVisible(true);
+        //mainView.setVisible(true);
 
         ServicoLucasTV.info("Iniciando Sistema");
 

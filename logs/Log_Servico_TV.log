@@ -7026,3 +7026,1032 @@ java.io.IOException: No error in nativeavailable
 2018-01-18 21:09:15 ERROR ServicoLucasTV:45 - Não foi possível encontrar a porta serial.
 2018-01-18 21:09:16 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
 2018-01-18 21:09:17 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-18 21:14:10 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-18 21:14:11 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-18 21:14:11 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-18 21:14:11 ERROR ServicoLucasTV:45 - Não foi possível encontrar a porta serial.
+2018-01-18 21:14:11 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-18 21:14:16 ERROR ServicoLucasTV:45 - Não foi possível encontrar a porta serial.
+2018-01-18 21:14:17 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-18 21:14:17 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-18 21:26:50 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-18 21:26:50 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-18 21:26:50 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-18 21:26:50 INFO  ServicoLucasTV:51 - Configurações da porta serial bem sucedidas.
+2018-01-18 21:26:56 INFO  ServicoLucasTV:51 - Controle desativado
+2018-01-18 21:27:03 INFO  ServicoLucasTV:51 - Controle ativado
+2018-01-18 21:27:06 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:06 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:07 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:07 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:08 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:09 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:11 INFO  ServicoLucasTV:51 - Controle desativado
+2018-01-18 21:27:19 INFO  ServicoLucasTV:51 - Controle ativado
+2018-01-18 21:27:21 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:22 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:23 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-01-18 21:27:23 INFO  ServicoLucasTV:56 - Comando não encontrado. Comando: 0
+2018-01-18 21:27:24 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-01-18 21:27:24 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-01-18 21:27:26 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-01-18 21:27:27 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-01-18 21:27:28 INFO  ServicoLucasTV:51 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-01-18 21:27:32 ERROR ServicoLucasTV:45 - Erro ao ler saida.
+java.io.IOException: No error in nativeavailable
+	at gnu.io.RXTXPort.nativeavailable(Native Method)
+	at gnu.io.RXTXPort$SerialInputStream.read(RXTXPort.java:1373)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at br.com.lucasnbertoldi.arduino.SerialService.serialEvent(SerialService.java:128)
+	at gnu.io.RXTXPort.sendEvent(RXTXPort.java:732)
+	at gnu.io.RXTXPort.eventLoop(Native Method)
+	at gnu.io.RXTXPort$MonitorThread.run(RXTXPort.java:1575)
+2018-01-18 21:27:32 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-18 21:27:37 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-20 16:48:53 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-20 16:48:53 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-20 16:48:53 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-20 16:48:55 ERROR ServicoLucasTV:45 - Não foi possível encontrar a porta serial.
+2018-01-20 16:48:55 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 16:49:00 ERROR ServicoLucasTV:45 - Não foi possível encontrar a porta serial.
+2018-01-20 16:49:01 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 16:49:06 ERROR ServicoLucasTV:45 - Não foi possível encontrar a porta serial.
+2018-01-20 16:49:06 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-20 17:19:08 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-20 17:19:08 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-20 17:19:08 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-20 17:19:08 INFO  ServicoLucasTV:51 - Configurações da porta serial bem sucedidas.
+2018-01-20 17:19:29 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-20 17:23:16 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-20 17:23:16 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-20 17:23:17 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-20 17:23:17 INFO  ServicoLucasTV:51 - Configurações da porta serial bem sucedidas.
+2018-01-20 17:23:18 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:23:18 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:23:25 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:23:25 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:23:32 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:23:32 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:23:39 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:23:39 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:23:46 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:23:47 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:23:48 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-20 17:24:36 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-20 17:24:36 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-20 17:24:36 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-20 17:24:36 INFO  ServicoLucasTV:51 - Configurações da porta serial bem sucedidas.
+2018-01-20 17:24:38 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:24:38 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:24:45 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:24:45 INFO  ServicoLucasTV:51 - Preparando para novas tentativas de configuração da porta serial.
+2018-01-20 17:24:51 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-20 17:25:25 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-20 17:25:25 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-20 17:25:25 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-20 17:25:25 INFO  ServicoLucasTV:51 - Configurações da porta serial bem sucedidas.
+2018-01-20 17:25:26 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:25:26 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-20 17:25:33 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:25:33 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-20 17:25:41 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:25:41 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-20 17:25:48 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:25:48 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-20 17:25:55 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:128)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:137)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-01-20 17:25:55 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-20 17:25:57 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 20:48:05 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 20:48:05 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 20:48:06 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 20:48:22 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 20:53:17 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 20:53:17 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 20:53:17 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 21:00:27 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 21:00:35 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 21:00:35 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 21:00:35 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 21:02:09 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 21:02:23 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 21:02:23 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 21:02:24 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 21:02:41 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 21:03:16 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 21:03:16 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 21:03:17 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 21:03:17 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:18 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:19 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:20 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:21 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:22 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:23 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:24 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:25 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:26 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:27 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:28 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:29 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:30 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:31 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:32 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:33 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:35 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:36 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:37 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:38 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:39 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:40 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:41 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:42 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:43 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:44 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:45 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:46 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:47 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:48 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:49 INFO  ServicoLucasTV:51 - Requisição do tipo Pausar/Continuar realizada com sucesso.
+2018-01-25 21:03:49 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 21:47:52 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 21:47:52 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 21:47:52 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 21:47:52 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":0,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":1,"jsonrpc":"2.0"},{"id":2,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:47:53 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":3,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":4,"jsonrpc":"2.0"},{"id":5,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:47:54 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":6,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":7,"jsonrpc":"2.0"},{"id":8,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:47:55 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":9,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":10,"jsonrpc":"2.0"},{"id":11,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:47:57 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":12,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":13,"jsonrpc":"2.0"},{"id":14,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:47:58 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":15,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":16,"jsonrpc":"2.0"},{"id":17,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:47:59 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":18,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":19,"jsonrpc":"2.0"},{"id":20,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:00 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":21,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":22,"jsonrpc":"2.0"},{"id":23,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:01 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":24,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":25,"jsonrpc":"2.0"},{"id":26,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:02 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":27,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":28,"jsonrpc":"2.0"},{"id":29,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:03 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":30,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":31,"jsonrpc":"2.0"},{"id":32,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:04 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":33,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":34,"jsonrpc":"2.0"},{"id":35,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:05 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":36,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":37,"jsonrpc":"2.0"},{"id":38,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:06 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":39,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":40,"jsonrpc":"2.0"},{"id":41,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:07 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":42,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":43,"jsonrpc":"2.0"},{"id":44,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:08 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":45,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":46,"jsonrpc":"2.0"},{"id":47,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:09 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":48,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":49,"jsonrpc":"2.0"},{"id":50,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:10 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":51,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":52,"jsonrpc":"2.0"},{"id":53,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:11 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":54,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":55,"jsonrpc":"2.0"},{"id":56,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:12 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":57,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":58,"jsonrpc":"2.0"},{"id":59,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:13 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":60,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":61,"jsonrpc":"2.0"},{"id":62,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:14 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":63,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":64,"jsonrpc":"2.0"},{"id":65,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:15 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":66,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":67,"jsonrpc":"2.0"},{"id":68,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:16 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":69,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":70,"jsonrpc":"2.0"},{"id":71,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:17 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":72,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":73,"jsonrpc":"2.0"},{"id":74,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:19 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":75,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":76,"jsonrpc":"2.0"},{"id":77,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:20 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":78,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":79,"jsonrpc":"2.0"},{"id":80,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:21 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":81,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":82,"jsonrpc":"2.0"},{"id":83,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:23 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":84,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":85,"jsonrpc":"2.0"},{"id":86,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:48:23 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 21:50:38 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 21:50:38 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 21:50:38 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 21:50:39 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:39 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":0,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":1,"jsonrpc":"2.0"},{"id":2,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:40 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:40 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":3,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":4,"jsonrpc":"2.0"},{"id":5,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:41 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:41 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":6,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":7,"jsonrpc":"2.0"},{"id":8,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:42 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:42 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":9,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":10,"jsonrpc":"2.0"},{"id":11,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:43 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:43 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":12,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":13,"jsonrpc":"2.0"},{"id":14,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:44 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:44 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":15,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":16,"jsonrpc":"2.0"},{"id":17,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:45 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:45 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":18,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":19,"jsonrpc":"2.0"},{"id":20,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:46 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:46 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":21,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":22,"jsonrpc":"2.0"},{"id":23,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:47 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:47 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":24,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":25,"jsonrpc":"2.0"},{"id":26,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:48 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:48 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":27,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":28,"jsonrpc":"2.0"},{"id":29,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:49 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:49 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":30,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":31,"jsonrpc":"2.0"},{"id":32,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:50 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:50 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":33,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":34,"jsonrpc":"2.0"},{"id":35,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:51 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:51 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":36,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":37,"jsonrpc":"2.0"},{"id":38,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:52 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:52 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":39,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":40,"jsonrpc":"2.0"},{"id":41,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:53 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:53 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":42,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":43,"jsonrpc":"2.0"},{"id":44,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:54 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:54 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":45,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":46,"jsonrpc":"2.0"},{"id":47,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:55 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:55 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":48,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":49,"jsonrpc":"2.0"},{"id":50,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 21:50:56 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 21:50:56 ERROR ServicoLucasTV:45 - Erro
+org.json.JSONException: JSONObject["result"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.checkMethodResponse(KodiService.java:208)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:165)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 21:50:56 INFO  ServicoLucasTV:56 - Requisição do tipo Recolher Propriedades não foi bem sucedida. Resposta: [{"id":51,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"error":{"code":-32602,"data":{"method":"Application.GetProperties","stack":{"message":"array element at index 2 does not match","name":"properties","property":{"message":"Received value does not match any of the defined enum values","name":"Application.Property.Name","type":"string"},"type":"array"}},"message":"Invalid params."},"id":52,"jsonrpc":"2.0"},{"id":53,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}}] - Código: 200
+2018-01-25 22:00:29 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 22:00:29 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 22:00:29 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 22:00:30 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:00:30 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:00:36 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":3,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":4,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":5,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":6,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:00:36 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:00:36 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:00:42 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":7,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":8,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":9,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":10,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:00:42 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:00:42 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:00:48 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":11,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":12,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":13,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":14,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:00:48 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:00:48 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:00:54 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":15,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":16,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":17,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":18,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:00:54 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:00:54 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:00 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":19,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":20,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":21,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":22,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:00 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:00 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:06 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":23,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":24,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":25,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":26,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:06 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:06 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:12 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":27,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":28,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":29,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":30,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:12 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:12 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:18 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":31,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":32,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":33,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":34,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:18 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:18 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:24 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":35,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":36,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":37,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":38,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:24 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:24 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:30 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":39,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":40,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":41,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":42,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:30 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:30 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:36 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":43,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":44,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":45,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":46,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:36 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:36 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:37 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 22:01:37 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 22:01:37 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 22:01:37 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:37 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:42 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":47,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":48,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":49,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":50,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:42 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:42 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:43 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":3,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":4,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":5,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":6,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:43 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:43 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:48 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":51,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":52,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":53,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":54,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:48 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:48 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:49 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":7,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":8,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":9,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":10,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:49 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:49 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:54 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":55,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":56,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":57,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":58,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:54 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:54 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:01:55 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":11,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":12,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":13,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":14,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:01:55 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:01:55 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:01 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":59,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":60,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":61,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":62,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:01 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:01 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:01 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":15,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":16,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":17,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":18,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:01 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:01 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:07 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":63,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":64,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":65,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":66,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:07 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:07 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:07 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":19,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":20,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":21,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":22,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:07 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:07 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:13 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":67,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":68,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":69,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":70,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:13 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:13 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:13 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":23,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":24,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":25,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":26,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:13 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:13 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:19 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":71,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":72,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":73,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":74,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:19 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:19 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:20 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":27,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":28,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":29,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":30,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:20 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:20 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:25 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":75,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":76,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":77,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":78,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:25 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:25 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:26 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":31,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":32,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":33,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":34,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:26 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:26 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:31 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":79,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":80,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":81,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Invalid type string received","name":"playerid","type":"integer"}},"message":"Invalid params."},"id":82,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:31 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:31 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:32 INFO  ServicoLucasTV:56 - Requisição do tipo Propriedades do player não foi bem sucedida. Resposta: [{"id":35,"jsonrpc":"2.0","result":[{"playerid":1,"type":"video"}]},{"id":36,"jsonrpc":"2.0","result":{"muted":false,"volume":60}},{"id":37,"jsonrpc":"2.0","result":{"currentwindow":{"id":12005,"label":"Vídeo em tela-cheia"}}},{"error":{"code":-32602,"data":{"method":"Player.GetProperties","stack":{"message":"Missing parameter","name":"properties","type":"array"}},"message":"Invalid params."},"id":38,"jsonrpc":"2.0"}] - Código: 200
+2018-01-25 22:02:32 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:32 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:34 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 22:02:38 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 22:02:53 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 22:02:53 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 22:02:53 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 22:02:53 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:53 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:02:59 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:02:59 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:03:05 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: JSONObject["speed"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getInt(JSONObject.java:535)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:03:05 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:03:09 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 22:03:31 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 22:03:31 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 22:03:31 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 22:03:41 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 22:37:10 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 22:37:10 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 22:37:11 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 22:37:12 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:12 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:18 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:18 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:24 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:24 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:30 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:30 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:36 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:36 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:42 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:42 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:48 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:48 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:37:54 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:37:54 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:38:00 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:38:00 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:38:06 ERROR ServicoLucasTV:45 - Erro ao consultar informações do KODI
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:178)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:32)
+2018-01-25 22:38:06 INFO  ServicoLucasTV:51 - Preparando para novas para consultar informações.
+2018-01-25 22:38:08 INFO  ServicoLucasTV:51 - Sistema Fechado.
+2018-01-25 22:38:14 INFO  ServicoLucasTV:51 - Iniciando Sistema
+2018-01-25 22:38:14 INFO  ServicoLucasTV:51 - Carregando Configurações.
+2018-01-25 22:38:15 INFO  ServicoLucasTV:51 - Inicializando serial.
+2018-01-25 22:38:38 INFO  ServicoLucasTV:51 - Sistema Fechado.

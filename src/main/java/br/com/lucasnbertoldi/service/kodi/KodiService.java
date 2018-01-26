@@ -1,7 +1,6 @@
 package br.com.lucasnbertoldi.service.kodi;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
-import br.com.lucasnbertoldi.gui.SystemTrayUtils;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import br.com.lucasnbertoldi.service.http.HTTPURLConnection;
@@ -22,9 +21,49 @@ public class KodiService {
             } else if (config.getUp().contains(text)) {
                 makeRequest(SHOW_MESSAGE, new RequestKodiDTO(UP, "Botão Cima", null));
             } else if (config.getLeft().contains(text)) {
-                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(LEFT, "Botão Esquerda", null));
+                switch (kodiDTO.windowID) {
+                    case FULLSCREEN_VIDEO_WINDOW:
+                    case OSD_FULLSCREN_VIDEO_WINDOW: {
+                        int speed = kodiDTO.speed;
+                        if (speed == 0) {
+                            speed = -1;
+                        }
+                        if (speed > 0) {
+                            speed = speed / 2;
+                        } else {
+                            speed = speed * 2;
+                        }
+                        if (speed >= MIN_SPEED) {
+                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
+                        }
+                        break;
+                    }
+                    default: {
+                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(LEFT, "Botão Esquerda", null));
+                    }
+                }
             } else if (config.getRight().contains(text)) {
-                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(RIGHT, "Botão Direita", null));
+                switch (kodiDTO.windowID) {
+                    case FULLSCREEN_VIDEO_WINDOW:
+                    case OSD_FULLSCREN_VIDEO_WINDOW: {
+                        int speed = kodiDTO.speed;
+                        if (speed == 0) {
+                            speed = 1;
+                        }
+                        if (speed < 0) {
+                            speed = speed / 2;
+                        } else {
+                            speed = speed * 2;
+                        }
+                        if (speed >= MIN_SPEED) {
+                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
+                        }
+                        break;
+                    }
+                    default: {
+                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(RIGHT, "Botão Direita", null));
+                    }
+                }
             } else if (config.getOk().contains(text)) {
                 switch (kodiDTO.windowID) {
                     case FULLSCREEN_VIDEO_WINDOW:
@@ -38,7 +77,6 @@ public class KodiService {
                         makeRequest(SHOW_MESSAGE, new RequestKodiDTO(OK, "Botão Selecionar", null));
                     }
                 }
-
             } else if (config.getBack().contains(text)) {
                 makeRequest(SHOW_MESSAGE, new RequestKodiDTO(BACK, "Botão Voltar", null));
             } else if (config.getVolumeUp().contains(text)) {
@@ -76,14 +114,14 @@ public class KodiService {
             } else if (config.getDisable().contains(text)) {
                 disabled = true;
                 ServicoLucasTV.info("Controle desativado");
-                SystemTrayUtils.showMessage("Mensagem", "O controle foi desativado", "info");
+                makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"Mensagem\", \"message\":\"O controle remoto foi desativado.\"}"));
             } else {
                 ServicoLucasTV.warning("Comando não encontrado. Comando: " + text);
             }
         } else {
             if (config.getDisable().contains(text)) {
                 ServicoLucasTV.info("Controle ativado");
-                SystemTrayUtils.showMessage("Mensagem", "O controle foi ativado", "info");
+                makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"Mensagem\", \"message\":\"O controle remoto foi ativado.\"}"));
                 disabled = false;
             }
         }
@@ -132,7 +170,18 @@ public class KodiService {
         RequestKodiDTO requestPropery = new RequestKodiDTO(GET_PROPERTIES, "Recolher Propriedades", new JSONArray().put(0, new JSONArray().put(0, "volume").put(1, "muted")).toString());
         RequestKodiDTO requestActivePlayer = new RequestKodiDTO(GET_ACTIVE_PLAYERS, "Players Ativos", null);
         RequestKodiDTO requestGuiProperties = new RequestKodiDTO(GET_WINDOW_PROPERTIES, "Propriedades da Janela", "[[\"currentwindow\"]]");
-        makeRequest(false, requestActivePlayer, requestPropery, requestGuiProperties);
+
+        if (kodiDTO.playerID != null) {
+            RequestKodiDTO requestPlayerProperties = new RequestKodiDTO(GET_PLAYER_PROPERTIES, "Propriedades do player", "[" + kodiDTO.playerID + ",[\"speed\"]]");
+            makeRequest(false, requestActivePlayer, requestPropery, requestGuiProperties, requestPlayerProperties);
+            if (!requestPlayerProperties.response.equals("")) {
+                JSONObject results = new JSONObject(requestPlayerProperties.response);
+                kodiDTO.speed = results.getInt("speed");
+            }
+        } else {
+            makeRequest(false, requestActivePlayer, requestPropery, requestGuiProperties);
+        }
+
         if (!requestActivePlayer.response.equals("")) {
             try {
                 JSONObject results = new JSONArray(requestActivePlayer.response).getJSONObject(0);
@@ -196,6 +245,8 @@ public class KodiService {
     private final String ACTIVATE_WINDOW = "GUI.ActivateWindow";
     private final String GET_PROPERTIES = "Application.GetProperties";
 
+    private final String NOTIFY = "GUI.ShowNotification";
+
     private final String GET_WINDOW_PROPERTIES = "GUI.GetProperties";
     private final int FULLSCREEN_VIDEO_WINDOW = 12005;
     private final int OSD_FULLSCREN_VIDEO_WINDOW = 12901;
@@ -204,6 +255,11 @@ public class KodiService {
 
     private final String PLAY_PAUSE = "Player.PlayPause";
     private final String STOP = "Player.Stop";
+    private final String GET_PLAYER_PROPERTIES = "Player.GetProperties";
+
+    private final String SET_SPEED = "Player.SetSpeed";
+    private final int MAX_SPEED = 32;
+    private final int MIN_SPEED = -32;
 
     private final String VOLUME = "Application.SetVolume";
     private final int RANGE_VOLUME = 5;
