@@ -20,7 +20,7 @@ public class ThreadService extends Thread {
         KodiService kodiService = new KodiService();
 
         SerialService serialService = new SerialService();
-        //serialService.initialize(kodiService);
+        serialService.initialize(kodiService);
 
         while (true) {
             if (serialService.error) {
@@ -30,7 +30,6 @@ public class ThreadService extends Thread {
             } else {
                 try {
                     kodiService.updateProperties();
-                    //kodiService.read("92");
                 } catch (Exception e) {
                     ServicoLucasTV.error("Erro ao consultar informações do KODI", e);
                     ServicoLucasTV.info("Preparando para novas para consultar informações.");
