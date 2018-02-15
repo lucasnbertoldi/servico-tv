@@ -4,8 +4,9 @@ import br.com.lucasnbertoldi.service.ThreadService;
 import br.com.lucasnbertoldi.gui.MainView;
 import br.com.lucasnbertoldi.gui.SystemTrayUtils;
 import br.com.lucasnbertoldi.gui.ViewUtils;
+import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
+import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import gnu.io.NoSuchPortException;
-import java.awt.AWTException;
 import org.apache.log4j.Logger;
 
 public class ServicoLucasTV {
@@ -18,27 +19,29 @@ public class ServicoLucasTV {
         ViewUtils.setarVisualPadrao();
 
         mainView = new MainView();
-        //mainView.setVisible(true);
 
         ServicoLucasTV.info("Iniciando Sistema");
 
-        try {
-            SystemTrayUtils.createSystemTrayIcon();
-        } catch (AWTException ex) {
-            ServicoLucasTV.error("Erro ao iniciar icone do serviço.", ex);
-        }
+        SystemTrayUtils.createSystemTrayIcon();
 
-        ServicoLucasTV.info("Carregando Configurações.");
+        ConfigurationDTO config;
         try {
+            config = ConfigurationService.getConfiguration();
+
+            ServicoLucasTV.info("Carregando Configurações.");
             ViewUtils.setConfigurationFields();
         } catch (RuntimeException e) {
             ServicoLucasTV.error("Erro ao carregar configurações.", e);
+            config = new ConfigurationDTO();
         }
-
-        ServicoLucasTV.info("Inicializando serial.");
         
+        mainView.setVisible(config.showScreen);
+        
+        ServicoLucasTV.info("Inicializando serial.");
+
         Thread t = new ThreadService();
         t.start();
+
     }
 
     public static void error(String message, Throwable cause) {

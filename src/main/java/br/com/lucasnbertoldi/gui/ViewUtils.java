@@ -20,9 +20,14 @@ public class ViewUtils {
      * inicia.
      */
     public static void setarVisualPadrao() {
-        //Stando visual conforme o SO
+        String sistema = System.getProperty("os.name");
+        ServicoLucasTV.LOG.info("Sistema operacional: " + sistema);
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            if (sistema.contains("Linux")) {
+                UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+            } else {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao definir visual!", "Erro!", JOptionPane.ERROR_MESSAGE);
         }
@@ -57,7 +62,6 @@ public class ViewUtils {
         ServicoLucasTV.mainView.logTextArea.setCaretPosition(document.getLength());
     }
 
-
     public static void printControllerOutput(String texto, String type) {
         DataService data = new DataService();
 
@@ -85,10 +89,9 @@ public class ViewUtils {
             ServicoLucasTV.LOG.error("Erro ao inserir texto na área de texto", ex);
         }
         ServicoLucasTV.mainView.logOutputController.setCaretPosition(document.getLength());
-    }    
-    
-    
-    public static void setConfigurationFields(){
+    }
+
+    public static void setConfigurationFields() {
         ConfigurationDTO config = ConfigurationService.getConfiguration();
         ServicoLucasTV.mainView.getUpField().setText(config.getTextUp());
         ServicoLucasTV.mainView.getDownField().setText(config.getTextDown());
@@ -103,12 +106,13 @@ public class ViewUtils {
         ServicoLucasTV.mainView.getStopField().setText(config.getTextStop());
         ServicoLucasTV.mainView.getSettingsField().setText(config.getTextSettings());
         ServicoLucasTV.mainView.getDisableField().setText(config.getTextDisable());
-        
+
         ServicoLucasTV.mainView.getUrlKODIField().setText(config.urlKODI);
         ServicoLucasTV.mainView.getUserField().setText(config.user);
         ServicoLucasTV.mainView.getPasswordField().setText(config.password);
         ServicoLucasTV.mainView.getSistemaField().setSelectedItem(config.sistema);
-        
+        ServicoLucasTV.mainView.getShowScreenCheckbox().setSelected(config.showScreen);
+
     }
 
 }

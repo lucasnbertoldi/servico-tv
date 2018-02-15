@@ -35,6 +35,7 @@ public class ConfigurationService {
         properties.setProperty("config.password", encryptText(config.password));
         properties.setProperty("config.urlKODI", config.urlKODI);
         properties.setProperty("config.sistema", config.sistema);
+        properties.setProperty("config.showScreen", config.showScreen+"");
         
         properties.setProperty("button.up", config.getTextUp());
         properties.setProperty("button.down", config.getTextDown());
@@ -107,6 +108,7 @@ public class ConfigurationService {
                 config.urlKODI = properties.getProperty("config.urlKODI");
                 config.user = properties.getProperty("config.user");
                 config.sistema = properties.getProperty("config.sistema");
+                config.showScreen = Boolean.parseBoolean(properties.getProperty("config.showScreen"));
                 
                 configuration = config;
 

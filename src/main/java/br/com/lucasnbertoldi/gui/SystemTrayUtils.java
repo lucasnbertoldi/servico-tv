@@ -1,100 +1,64 @@
 package br.com.lucasnbertoldi.gui;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
-import java.awt.AWTException;
-import java.awt.Image;
-import java.awt.MenuItem;
-import java.awt.PopupMenu;
-import java.awt.SystemTray;
-import java.awt.TrayIcon;
+import dorkbox.notify.Notify;
+import dorkbox.notify.Pos;
+import dorkbox.systemTray.MenuItem;
+import dorkbox.systemTray.SystemTray;
+import dorkbox.util.ActionHandler;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class SystemTrayUtils {
 
     // Criando Icone na Barra de Tarefas
-    public static void createSystemTrayIcon() throws AWTException {
+    public static void createSystemTrayIcon() {
 
-        if (SystemTray.isSupported()) {
-            MouseListener mouseListener;
-            mouseListener = new MouseListener() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    if (e.getButton() == MouseEvent.BUTTON1) {
-                        if (e.getClickCount() == 2) {
-                            ServicoLucasTV.mainView.setVisible(true);
-                        }
-                    }
-                }
-
-                @Override
-                public void mouseEntered(MouseEvent e) {
-                }
-
-                @Override
-                public void mouseExited(MouseEvent e) {
-
-                }
-
-                @Override
-                public void mousePressed(MouseEvent e) {
-
-                }
-
-                @Override
-                public void mouseReleased(MouseEvent e) {
-
-                }
-            };
-
-            PopupMenu menu = new PopupMenu();
-
-            MenuItem mostrarAuxiliar = new MenuItem("Mostrar Serviço");
-            mostrarAuxiliar.addActionListener((ActionEvent e) -> {
-                ServicoLucasTV.mainView.setVisible(true);
-            });
-            menu.add(mostrarAuxiliar);
-            menu.addSeparator();
-            MenuItem quitItem = new MenuItem("Sair");
-            quitItem.addActionListener((ActionEvent e) -> {
-                int option = JOptionPane.showConfirmDialog(null, "Deseja realmente fechar o serviço?", "Confirmar", JOptionPane.YES_NO_OPTION);
-                if (option == JOptionPane.YES_OPTION) {
-                    ServicoLucasTV.info("Sistema Fechado.");
-                    System.exit(0);
-                }
-            });
-            menu.add(quitItem);
-            
-            SystemTray tray = SystemTray.getSystemTray();
-
-            ImageIcon icon = new ImageIcon(SystemTray.class.getResource("/img/icone.png"));
-            Image image = icon.getImage();
-
-            TrayIcon trayIcon = new TrayIcon(image, "Serviço Lucas-TV", menu);
-            trayIcon.setImageAutoSize(true);
-            tray.add(trayIcon);
-            trayIcon.addMouseListener(mouseListener);
+        SystemTray systemTray = SystemTray.get();
+        if (systemTray == null) {
+            throw new RuntimeException("Unable to load SystemTray!");
         }
+        systemTray.setImage(SystemTray.class.getResource("/img/icone.png"));
+
+        systemTray.setStatus("Serviço Lucas TV");
+        systemTray.setTooltip("Serviço Lucas TV");
+
+        systemTray.getMenu().add(new MenuItem("Mostrar Serviço", (final ActionEvent e) -> {
+            ServicoLucasTV.mainView.setVisible(true);
+        }));
+
+        systemTray.getMenu().add(new MenuItem("Sair", (final ActionEvent e) -> {
+            int option = JOptionPane.showConfirmDialog(null, "Deseja realmente fechar o serviço?", "Confirmar", JOptionPane.YES_NO_OPTION);
+            if (option == JOptionPane.YES_OPTION) {
+                ServicoLucasTV.info("Sistema Fechado.");
+                System.exit(0);
+                systemTray.shutdown();
+            }
+        }));
     }
 
     public static void showMessage(String title, String text, String type) {
-
-        TrayIcon trayIcon = SystemTray.getSystemTray().getTrayIcons()[0];
-
+        Notify notify = Notify.create().text(text).title(title).onAction((Notify t) -> {
+            ServicoLucasTV.mainView.setVisible(true);
+        }).hideAfter(3000);
+        String sistema = System.getProperty("os.name");
+        if (sistema.contains("Linux")) {
+            notify.position(Pos.TOP_RIGHT);
+        } else {
+            notify.position(Pos.BOTTOM_RIGHT);
+        }
         switch (type) {
             case "info": {
-                trayIcon.displayMessage(title, text, TrayIcon.MessageType.INFO);
+                notify.showInformation();
                 break;
             }
             case "error": {
-                trayIcon.displayMessage(title, text, TrayIcon.MessageType.ERROR);
+                notify.showError();
                 break;
             }
             case "warning": {
-                trayIcon.displayMessage(title, text, TrayIcon.MessageType.WARNING);
+                notify.showWarning();
                 break;
             }
             default: {

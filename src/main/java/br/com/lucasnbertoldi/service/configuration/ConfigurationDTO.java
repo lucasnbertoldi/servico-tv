@@ -24,6 +24,7 @@ public class ConfigurationDTO {
     public String password;
     public String urlKODI;
     public String sistema;
+    public boolean showScreen;
 
     public ConfigurationDTO() {
         this.up = new ArrayList<>();
@@ -43,6 +44,7 @@ public class ConfigurationDTO {
         this.user = "";
         this.password = "";
         this.sistema = "Windows";
+        this.showScreen = true;
 
     }
 
