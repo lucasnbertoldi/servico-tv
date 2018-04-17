@@ -5,10 +5,8 @@ import dorkbox.notify.Notify;
 import dorkbox.notify.Pos;
 import dorkbox.systemTray.MenuItem;
 import dorkbox.systemTray.SystemTray;
-import dorkbox.util.ActionHandler;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 
 public class SystemTrayUtils {
 
