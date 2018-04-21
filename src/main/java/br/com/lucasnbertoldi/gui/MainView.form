@@ -129,40 +129,40 @@
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="playPauseField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="playPauseField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel17" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="leftField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="leftField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel6" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="subtitleScreenField" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel16" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jLabel16" max="32767" attributes="0"/>
+                                          <Component id="subtitleScreenField" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="volumeUpField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="volumeUpField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel13" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="disableField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="disableField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                               <Component id="jLabel19" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="stopField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="stopField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                               <Component id="jLabel18" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="volumeDownsField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="volumeDownsField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel12" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -171,34 +171,34 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="upField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="upField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel4" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="backField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="backField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel11" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="okField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="okField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel7" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="rightField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="rightField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel5" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="downField" alignment="0" pref="105" max="32767" attributes="0"/>
-                                          <Component id="jLabel3" alignment="0" pref="105" max="32767" attributes="0"/>
+                                          <Component id="downField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="settingsField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="settingsField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                           <Component id="jLabel15" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -215,8 +215,8 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="32" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -303,7 +303,7 @@
                       <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="disableField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
@@ -630,7 +630,7 @@
                       <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="222" max="-2" attributes="0"/>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

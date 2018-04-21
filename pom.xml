@@ -17,12 +17,6 @@
             <version>2.9.7</version>
             <type>jar</type>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.rxtx/rxtx -->
-        <dependency>
-            <groupId>org.rxtx</groupId>
-            <artifactId>rxtx</artifactId>
-            <version>2.1.7</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
@@ -46,11 +40,11 @@
             <version>3.7</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.fazecast/jSerialComm -->
-        <!--        <dependency>
+                <dependency>
             <groupId>com.fazecast</groupId>
             <artifactId>jSerialComm</artifactId>
             <version>2.0.2</version>
-        </dependency>-->
+        </dependency>
 
     </dependencies>
     <properties>
@@ -86,10 +80,10 @@
         </plugins>
 
     </build> 
-<!--    <repositories>
+    <repositories>
         <repository>
             <id>swt-repo</id>
             <url>https://raw.githubusercontent.com/maven-eclipse/swt-repo/master/</url>
         </repository>
-    </repositories>  -->
+    </repositories>  
 </project>

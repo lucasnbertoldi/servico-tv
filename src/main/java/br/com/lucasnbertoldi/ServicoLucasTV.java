@@ -6,15 +6,15 @@ import br.com.lucasnbertoldi.gui.SystemTrayUtils;
 import br.com.lucasnbertoldi.gui.ViewUtils;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
-import gnu.io.NoSuchPortException;
 import org.apache.log4j.Logger;
 
 public class ServicoLucasTV {
 
     public static MainView mainView;
     public static final Logger LOG = Logger.getLogger(ServicoLucasTV.class);
+    public static final String PATH_PRINCIPAL_LINUX = "/home/lucas/Serviço/";
 
-    public static void main(String[] args) throws NoSuchPortException {
+    public static void main(String[] args) {
 
         ViewUtils.setarVisualPadrao();
 
@@ -22,7 +22,7 @@ public class ServicoLucasTV {
 
         ServicoLucasTV.info("Iniciando Sistema");
 
-        SystemTrayUtils.createSystemTrayIcon();
+        SystemTrayUtils.createSystemTrayIconDorkBox();
 
         ConfigurationDTO config;
         try {
@@ -34,9 +34,9 @@ public class ServicoLucasTV {
             ServicoLucasTV.error("Erro ao carregar configurações.", e);
             config = new ConfigurationDTO();
         }
-        
+
         mainView.setVisible(config.showScreen);
-        
+
         ServicoLucasTV.info("Inicializando serial.");
 
         Thread t = new ThreadService();
@@ -46,6 +46,10 @@ public class ServicoLucasTV {
 
     public static void error(String message, Throwable cause) {
         LOG.error(message, cause);
+        ViewUtils.printOutput(message, "danger");
+    }
+
+    public static void error(String message) {
         ViewUtils.printOutput(message, "danger");
     }
 

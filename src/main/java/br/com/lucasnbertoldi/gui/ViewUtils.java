@@ -15,6 +15,8 @@ import javax.swing.text.StyledDocument;
 
 public class ViewUtils {
 
+    public static String SISTEMA = "";
+
     /**
      * Seta o visual do programa de acordo com o Sistema Operacional que o
      * inicia.
@@ -24,8 +26,10 @@ public class ViewUtils {
         ServicoLucasTV.LOG.info("Sistema operacional: " + sistema);
         try {
             if (sistema.contains("Linux")) {
+                SISTEMA = "Linux";
                 UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
             } else {
+                SISTEMA = sistema;
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
@@ -34,6 +38,9 @@ public class ViewUtils {
     }
 
     public static void printOutput(String texto, String type) {
+        clearOutput(ServicoLucasTV.mainView.logTextArea);
+        
+        
         DataService data = new DataService();
 
         StyledDocument document = (StyledDocument) ServicoLucasTV.mainView.logTextArea.getStyledDocument();
@@ -61,8 +68,16 @@ public class ViewUtils {
         }
         ServicoLucasTV.mainView.logTextArea.setCaretPosition(document.getLength());
     }
+    
+    private static void clearOutput(javax.swing.JTextPane textPanel){
+        if (textPanel.getText().length() > 999999) {
+            textPanel.setText("");
+        }
+    }
 
     public static void printControllerOutput(String texto, String type) {
+        clearOutput(ServicoLucasTV.mainView.logOutputController);
+
         DataService data = new DataService();
 
         StyledDocument document = (StyledDocument) ServicoLucasTV.mainView.logOutputController.getStyledDocument();

@@ -22,8 +22,9 @@ public class ThreadService extends Thread {
         SerialService serialService = new SerialService();
         serialService.initialize(kodiService);
 
-        while (true) {
-            if (serialService.error) {
+        while (true) {            
+            if (serialService.comPort == null || !serialService.comPort.isOpen()) {
+                ServicoLucasTV.error("Não foi possível se conectar com a porta serial.");
                 ServicoLucasTV.info("Preparando para novas tentativas de configuração da porta serial.");
                 delay(5000);
                 serialService.initialize(kodiService);

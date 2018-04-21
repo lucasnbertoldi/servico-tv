@@ -165,8 +165,15 @@ public class KodiService {
         return checkMethodResponse(resposta, showMessage, requests);
     }
     private KodiDTO kodiDTO = new KodiDTO();
+    
+    private boolean first = true;
 
     public void updateProperties() {
+        if (first) {
+            makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"Mensagem\", \"message\":\"O Serviço está executando.\"}"));
+            first = false;
+        }
+        
         RequestKodiDTO requestPropery = new RequestKodiDTO(GET_PROPERTIES, "Recolher Propriedades", new JSONArray().put(0, new JSONArray().put(0, "volume").put(1, "muted")).toString());
         RequestKodiDTO requestActivePlayer = new RequestKodiDTO(GET_ACTIVE_PLAYERS, "Players Ativos", null);
         RequestKodiDTO requestGuiProperties = new RequestKodiDTO(GET_WINDOW_PROPERTIES, "Propriedades da Janela", "[[\"currentwindow\"]]");
