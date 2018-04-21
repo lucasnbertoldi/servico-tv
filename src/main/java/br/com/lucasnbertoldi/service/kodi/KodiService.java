@@ -113,19 +113,23 @@ public class KodiService {
                 }
             } else if (config.getDisable().contains(text)) {
                 disabled = true;
-                ServicoLucasTV.info("Controle desativado");
-                makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"Mensagem\", \"message\":\"O controle remoto foi desativado.\"}"));
+                ServicoLucasTV.info("Controle Remoto Desativado");
+                sendAMessage("Controle Remoto Desativado.");
             } else {
                 ServicoLucasTV.warning("Comando não encontrado. Comando: " + text);
             }
         } else {
             if (config.getDisable().contains(text)) {
-                ServicoLucasTV.info("Controle ativado");
-                makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"Mensagem\", \"message\":\"O controle remoto foi ativado.\"}"));
+                ServicoLucasTV.info("Controle Remoto Ativado");
+                sendAMessage("Controle Remoto Ativado.");
                 disabled = false;
             }
         }
 
+    }
+
+    private void sendAMessage(String message) {
+        makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"" + ServicoLucasTV.NOME_SOFTWARE + "\", \"message\":\"" + message + "\"}"));
     }
 
     private RequestKodiDTO[] makeRequest(boolean showMessage, RequestKodiDTO... requests) {
@@ -165,15 +169,15 @@ public class KodiService {
         return checkMethodResponse(resposta, showMessage, requests);
     }
     private KodiDTO kodiDTO = new KodiDTO();
-    
+
     private boolean first = true;
 
     public void updateProperties() {
         if (first) {
-            makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"Mensagem\", \"message\":\"O Serviço está executando.\"}"));
+            sendAMessage("O Serviço está executando.");
             first = false;
         }
-        
+
         RequestKodiDTO requestPropery = new RequestKodiDTO(GET_PROPERTIES, "Recolher Propriedades", new JSONArray().put(0, new JSONArray().put(0, "volume").put(1, "muted")).toString());
         RequestKodiDTO requestActivePlayer = new RequestKodiDTO(GET_ACTIVE_PLAYERS, "Players Ativos", null);
         RequestKodiDTO requestGuiProperties = new RequestKodiDTO(GET_WINDOW_PROPERTIES, "Propriedades da Janela", "[[\"currentwindow\"]]");

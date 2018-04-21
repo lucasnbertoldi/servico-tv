@@ -11219,3 +11219,476 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2018-04-20 22:40:52 INFO  ServicoLucasTV:58 - Preparando para novas tentativas de configuração da porta serial.
 2018-04-20 22:40:53 INFO  ServicoLucasTV:58 - Sistema Fechado.
 2018-04-20 22:40:57 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:30:42 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:30:43 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:30:43 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:30:43 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:30:47 ERROR ServicoLucasTV:48 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:164)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:33)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-04-21 10:30:47 INFO  ServicoLucasTV:58 - Preparando para novas para consultar informações.
+2018-04-21 10:30:54 ERROR ServicoLucasTV:48 - Erro ao consultar informações do KODI
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:164)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:173)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:33)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1167)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1103)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:931)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 4 more
+2018-04-21 10:30:54 INFO  ServicoLucasTV:58 - Preparando para novas para consultar informações.
+2018-04-21 10:31:16 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:17 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:17 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:18 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:19 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:19 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:20 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:31:21 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:21 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:22 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:31:22 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:23 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:31:23 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:24 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Selecionar realizada com sucesso.
+2018-04-21 10:31:25 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:25 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:26 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:27 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:27 INFO  ServicoLucasTV:63 - Comando não encontrado. Comando: 8965625
+2018-04-21 10:31:28 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:29 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:30 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:31 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:31 INFO  ServicoLucasTV:63 - Comando não encontrado. Comando: 8965625
+2018-04-21 10:31:32 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:35 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:36 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:36 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:31:37 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:38 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:38 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:39 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:31:55 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Selecionar realizada com sucesso.
+2018-04-21 10:36:01 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:36:02 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:36:03 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:36:03 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:36:04 INFO  ServicoLucasTV:58 - Preparando para novas tentativas de configuração da porta serial.
+2018-04-21 10:36:07 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:36:12 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:36:21 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:36:22 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:36:23 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:36:23 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:36:40 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:37:04 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:37:31 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Selecionar realizada com sucesso.
+2018-04-21 10:38:37 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:39:08 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:39:09 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:39:10 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:39:10 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:40:41 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:40:48 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:40:49 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:40:49 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:40:49 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:40:53 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:40:54 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:40:55 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:40:56 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:40:56 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:40:57 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:40:57 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:40:58 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:40:58 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:40:59 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:40:59 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:00 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:00 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:01 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:01 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:02 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:02 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:02 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:03 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:08 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:09 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:09 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:10 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:10 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:10 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:11 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:41:12 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:41:12 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:41:12 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:41:13 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:41:13 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:41:14 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:14 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:15 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:15 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:16 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:41:16 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:17 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:17 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:18 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:41:19 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 10:43:43 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:43:49 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:43:49 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:43:50 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:43:50 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:43:58 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 10:44:11 ERROR ServicoLucasTV:48 - O comando foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:164)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.read(KodiService.java:106)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:41)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1888)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1883)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1882)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1455)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:175)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:701)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1534)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2952)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:169)
+	... 7 more
+2018-04-21 10:44:11 INFO  ServicoLucasTV:63 - Comando não encontrado. Comando: 90656269165626
+2018-04-21 10:44:15 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:44:16 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:44:16 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:44:17 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:44:17 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:44:18 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:44:18 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:44:18 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:44:54 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:44:54 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:44:55 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Cima realizada com sucesso.
+2018-04-21 10:44:55 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:44:56 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Direita realizada com sucesso.
+2018-04-21 10:44:56 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:44:57 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:44:58 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:46:26 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:46:32 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:46:32 INFO  ServicoLucasTV:58 - Iniciando Sistema
+2018-04-21 10:46:33 INFO  ServicoLucasTV:58 - Carregando Configurações.
+2018-04-21 10:46:33 INFO  ServicoLucasTV:58 - Inicializando serial.
+2018-04-21 10:46:36 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:46:37 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Esquerda realizada com sucesso.
+2018-04-21 10:46:38 INFO  ServicoLucasTV:58 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 10:46:51 ERROR ServicoLucasTV:48 - O comando 204 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:164)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.read(KodiService.java:106)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:41)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1888)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1883)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1882)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1455)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:175)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:701)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1534)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2952)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:169)
+	... 7 more
+2018-04-21 10:46:51 INFO  ServicoLucasTV:63 - Comando não encontrado. Comando: 0
+2018-04-21 10:47:06 INFO  ServicoLucasTV:58 - Sistema Fechado.
+2018-04-21 10:52:55 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:52:55 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 10:52:56 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 10:52:56 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 10:53:00 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Baixo realizada com sucesso.
+2018-04-21 10:53:09 INFO  ServicoLucasTV:59 - Sistema Fechado.
+2018-04-21 10:54:56 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:54:56 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 10:54:57 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 10:54:57 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 10:55:01 INFO  ServicoLucasTV:59 - Controle Remoto Desativado
+2018-04-21 10:55:07 INFO  ServicoLucasTV:59 - Controle Remoto Ativado
+2018-04-21 10:55:11 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 10:55:16 INFO  ServicoLucasTV:59 - Requisição do tipo Parar realizada com sucesso.
+2018-04-21 10:55:28 INFO  ServicoLucasTV:59 - Sistema Fechado.
+2018-04-21 10:56:13 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 10:56:13 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 10:56:14 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 10:56:14 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 10:56:21 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Selecionar realizada com sucesso.
+2018-04-21 10:56:35 ERROR ServicoLucasTV:49 - O comando 204 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:168)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.read(KodiService.java:106)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:41)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1888)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1883)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1882)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1455)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:175)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:701)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1534)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2952)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:169)
+	... 7 more
+2018-04-21 10:59:11 INFO  ServicoLucasTV:64 - Comando não encontrado. Comando: 2154833577
+2018-04-21 10:59:12 INFO  ServicoLucasTV:64 - Comando não encontrado. Comando: 2154866345
+2018-04-21 10:59:13 INFO  ServicoLucasTV:64 - Comando não encontrado. Comando: 2154833577
+2018-04-21 10:59:20 INFO  ServicoLucasTV:64 - Comando não encontrado. Comando: 2154866345
+2018-04-21 10:59:21 INFO  ServicoLucasTV:64 - Comando não encontrado. Comando: 2154833577
+2018-04-21 10:59:23 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 10:59:38 ERROR ServicoLucasTV:49 - O comando 204 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:168)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.read(KodiService.java:106)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:41)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1888)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1883)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1882)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1455)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:175)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:701)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1534)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2952)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:169)
+	... 7 more
+2018-04-21 11:05:33 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 11:05:34 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 11:05:46 ERROR ServicoLucasTV:49 - O comando 65740 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:168)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.read(KodiService.java:106)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:41)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1888)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1883)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1882)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1455)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:175)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:701)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1534)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2952)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:169)
+	... 7 more
+2018-04-21 11:07:54 INFO  ServicoLucasTV:59 - Sistema Fechado.
+2018-04-21 11:07:59 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 11:08:00 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 11:08:00 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 11:08:00 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 11:08:10 INFO  ServicoLucasTV:59 - Requisição do tipo Botão Voltar realizada com sucesso.
+2018-04-21 11:08:22 ERROR ServicoLucasTV:49 - O comando 65740 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:168)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.read(KodiService.java:106)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:41)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1888)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1883)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1882)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1455)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:175)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:701)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1534)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1439)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2952)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:169)
+	... 7 more
+2018-04-21 11:08:45 INFO  ServicoLucasTV:59 - Sistema Fechado.
+2018-04-21 11:36:15 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 11:36:16 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 11:36:16 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 11:36:16 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 11:37:03 INFO  ServicoLucasTV:59 - Sistema Fechado.
+2018-04-21 11:38:05 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 11:38:06 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 11:38:06 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 11:38:06 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 11:38:25 INFO  ServicoLucasTV:59 - Sistema Fechado.
+2018-04-21 11:41:05 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 11:41:06 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 11:41:42 INFO  ServicoLucasTV:26 - Sistema operacional: Windows 8.1
+2018-04-21 11:41:42 INFO  ServicoLucasTV:59 - Iniciando Sistema
+2018-04-21 11:41:43 INFO  ServicoLucasTV:59 - Carregando Configurações.
+2018-04-21 11:41:43 INFO  ServicoLucasTV:59 - Inicializando serial.
+2018-04-21 11:42:11 INFO  ServicoLucasTV:59 - Sistema Fechado.

@@ -18,11 +18,11 @@ public class SerialService {
         }
         for (SerialPort commPort : SerialPort.getCommPorts()) {
             comPort = commPort;
-        }        
+        }
         if (comPort == null) {
             ServicoLucasTV.error("Nenhuma porta serial encontrada.");
             return;
-        }        
+        }
         comPort.openPort();
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
@@ -37,7 +37,11 @@ public class SerialService {
                 }
                 byte[] data = event.getReceivedData();
                 String string = new String(data);
-                kodiService.read(string);
+                try {
+                    kodiService.read(string);
+                } catch (Exception e) {
+                    ServicoLucasTV.error("O comando " + string + " foi recebido, mas ocorreu um erro ao processar a informação.", e);
+                }
                 ViewUtils.printControllerOutput(string, "info");
             }
         });

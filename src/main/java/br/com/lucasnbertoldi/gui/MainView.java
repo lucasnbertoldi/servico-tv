@@ -9,6 +9,7 @@ import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import java.io.IOException;
+import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -89,6 +90,11 @@ public class MainView extends javax.swing.JFrame {
         setTitle("Serviço Lucas TV");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -645,6 +651,10 @@ public class MainView extends javax.swing.JFrame {
     private void showScreenCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showScreenCheckboxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_showScreenCheckboxActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        setIconImage(new ImageIcon(getClass().getResource("/img/icone-maior.png")).getImage());
+    }//GEN-LAST:event_formComponentShown
 
     public JTextField getDownField() {
         return downField;

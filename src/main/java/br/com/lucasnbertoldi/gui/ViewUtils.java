@@ -15,7 +15,6 @@ import javax.swing.text.StyledDocument;
 
 public class ViewUtils {
 
-    public static String SISTEMA = "";
 
     /**
      * Seta o visual do programa de acordo com o Sistema Operacional que o
@@ -26,10 +25,10 @@ public class ViewUtils {
         ServicoLucasTV.LOG.info("Sistema operacional: " + sistema);
         try {
             if (sistema.contains("Linux")) {
-                SISTEMA = "Linux";
+                ServicoLucasTV.SISTEMA = "Linux";
                 UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
             } else {
-                SISTEMA = sistema;
+                ServicoLucasTV.SISTEMA = sistema;
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {

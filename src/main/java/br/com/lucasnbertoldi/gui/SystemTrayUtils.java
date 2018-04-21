@@ -21,8 +21,10 @@ import org.apache.commons.io.IOUtils;
 
 public class SystemTrayUtils {
 
+    public static final String PATH_ICONE_MENOR = "img/icone-menor.png";
+
     public static void createSystemTrayIconDorkBox() {
-        if (ViewUtils.SISTEMA.equals("Linux")) {
+        if (ServicoLucasTV.SISTEMA.equals("Linux")) {
             SystemTray.FORCE_GTK2 = true;
         }
 
@@ -32,10 +34,10 @@ public class SystemTrayUtils {
             throw new RuntimeException("Unable to load SystemTray!");
         }
 
-        if (ViewUtils.SISTEMA.equals("Linux")) {
-            systemTray.setImage(new File(ServicoLucasTV.PATH_PRINCIPAL_LINUX + "img/icone.png"));
+        if (ServicoLucasTV.SISTEMA.equals("Linux")) {
+            systemTray.setImage(new File(ServicoLucasTV.PATH_PRINCIPAL_LINUX + PATH_ICONE_MENOR));
         } else {
-            systemTray.setImage(SystemTray.class.getResource("/img/icone.png"));
+            systemTray.setImage(SystemTray.class.getResource("/" + PATH_ICONE_MENOR));
         }
 
         systemTray.setStatus("Serviço Lucas TV");
@@ -110,7 +112,7 @@ public class SystemTrayUtils {
 
             byte[] imagebyte = null;
             try {
-                if (ViewUtils.SISTEMA.equals("Linux")) {
+                if (ServicoLucasTV.SISTEMA.equals("Linux")) {
                     imagebyte = IOUtils.toByteArray(new FileInputStream(new File(ServicoLucasTV.PATH_PRINCIPAL_LINUX + "img/icone.png")));
                 } else {
                     imagebyte = IOUtils.toByteArray(java.awt.SystemTray.class.getResourceAsStream("/img/icone.png"));
