@@ -35,6 +35,8 @@ public class ViewUtils {
             JOptionPane.showMessageDialog(null, "Erro ao definir visual!", "Erro!", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    
 
     public static void printOutput(String texto, String type) {
         clearOutput(ServicoLucasTV.mainView.logTextArea);

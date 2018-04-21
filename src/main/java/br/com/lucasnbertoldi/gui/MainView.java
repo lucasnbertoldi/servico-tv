@@ -8,10 +8,12 @@ package br.com.lucasnbertoldi.gui;
 import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
+import java.awt.Image;
 import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
@@ -653,7 +655,15 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_showScreenCheckboxActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        setIconImage(new ImageIcon(getClass().getResource("/img/icone-maior.png")).getImage());
+        if (ServicoLucasTV.SISTEMA.equals("Linux")) {
+            JFrame.setDefaultLookAndFeelDecorated(true);
+            ImageIcon icon = new ImageIcon(ServicoLucasTV.PATH_PRINCIPAL_LINUX + "img/icone-maior.png");
+            Image image = icon.getImage();
+            setIconImage(image);
+        } else {
+            setIconImage(new ImageIcon(getClass().getResource("/img/icone-maior.png")).getImage());
+        }
+
     }//GEN-LAST:event_formComponentShown
 
     public JTextField getDownField() {
@@ -699,7 +709,7 @@ public class MainView extends javax.swing.JFrame {
     public JTextField getVolumeDownsField() {
         return volumeDownsField;
     }
-    
+
     public JTextField getVolumeUpField() {
         return volumeUpField;
     }
@@ -727,8 +737,7 @@ public class MainView extends javax.swing.JFrame {
     public JCheckBox getShowScreenCheckbox() {
         return showScreenCheckbox;
     }
-        
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField backField;
