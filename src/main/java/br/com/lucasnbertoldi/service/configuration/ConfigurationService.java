@@ -9,6 +9,8 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -23,8 +25,10 @@ public class ConfigurationService {
     private static final String PATH_FILE = "/servico.properties";
 
     private static ConfigurationDTO configuration;
+    
+     public static List<ButtonDTO> buttonList = new ArrayList<>();
 
-    public static void setConfiguration(ConfigurationDTO config) throws IOException {
+    public static void setConfiguration(ConfigurationDTO config, List<ButtonDTO> newButtonList) throws IOException {
 
         String path = new File(".").getCanonicalPath();
 
@@ -35,21 +39,28 @@ public class ConfigurationService {
         properties.setProperty("config.password", encryptText(config.password));
         properties.setProperty("config.urlKODI", config.urlKODI);
         properties.setProperty("config.sistema", config.sistema);
-        properties.setProperty("config.showScreen", config.showScreen+"");
+        properties.setProperty("config.showScreen", config.showScreen + "");
         
-        properties.setProperty("button.up", config.getTextUp());
-        properties.setProperty("button.down", config.getTextDown());
-        properties.setProperty("button.left", config.getTextLeft());
-        properties.setProperty("button.right", config.getTextRight());
-        properties.setProperty("button.ok", config.getTextOk());
-        properties.setProperty("button.back", config.getTextBack());
-        properties.setProperty("button.volumeUp", config.getTextVolumeUp());
-        properties.setProperty("button.volumeDown", config.getTextVolumeDown());
-        properties.setProperty("button.disable", config.getTextDisable());
-        properties.setProperty("button.settings", config.getTextSettings());
-        properties.setProperty("button.playPause", config.getTextPlayPause());
-        properties.setProperty("button.stop", config.getTextStop());
-        properties.setProperty("button.subtitleScreen", config.getTextSubtitleScreen());
+        for (ButtonDTO buttonDTO : newButtonList) {
+            properties.setProperty(buttonDTO.getButtonEnum().getPropertyName(), buttonDTO.getTextCodeList());
+        }
+        
+        buttonList = newButtonList;
+        
+//
+//        properties.setProperty("button.up", config.getTextUp());
+//        properties.setProperty("button.down", config.getTextDown());
+//        properties.setProperty("button.left", config.getTextLeft());
+//        properties.setProperty("button.right", config.getTextRight());
+//        properties.setProperty("button.ok", config.getTextOk());
+//        properties.setProperty("button.back", config.getTextBack());
+//        properties.setProperty("button.volumeUp", config.getTextVolumeUp());
+//        properties.setProperty("button.volumeDown", config.getTextVolumeDown());
+//        properties.setProperty("button.disable", config.getTextDisable());
+//        properties.setProperty("button.settings", config.getTextSettings());
+//        properties.setProperty("button.playPause", config.getTextPlayPause());
+//        properties.setProperty("button.stop", config.getTextStop());
+//        properties.setProperty("button.subtitleScreen", config.getTextSubtitleScreen());
 
         try {
             //grava os dados no arquivo
@@ -66,8 +77,9 @@ public class ConfigurationService {
             throw new IIOException(ex.getMessage(), ex);
         }
     }
-    
-        public static ConfigurationDTO getConfiguration() {
+
+    public static ConfigurationDTO getConfiguration() {
+
         if (ConfigurationService.configuration != null) {
 
             return ConfigurationService.configuration;
@@ -89,27 +101,31 @@ public class ConfigurationService {
                 FileInputStream fis = new FileInputStream(path + PATH_FILE);
                 //metodo load faz a leitura atraves do objeto fis
                 properties.load(fis);
-
-                config.setDown(properties.getProperty("button.down"));
-                config.setLeft(properties.getProperty("button.left"));
-                config.setRight(properties.getProperty("button.right"));
-                config.setUp(properties.getProperty("button.up"));
-                config.setOk(properties.getProperty("button.ok"));
-                config.setBack(properties.getProperty("button.back"));
-                config.setVolumeDown(properties.getProperty("button.volumeDown"));
-                config.setVolumeUp(properties.getProperty("button.volumeUp"));
-                config.setSubtitleScreen(properties.getProperty("button.subtitleScreen"));
-                config.setPlayPause(properties.getProperty("button.playPause"));
-                config.setStop(properties.getProperty("button.stop"));
-                config.setSettings(properties.getProperty("button.settings"));
-                config.setDisable(properties.getProperty("button.disable"));
                 
+                for (ButtonDTO buttonDTO : buttonList) {
+                    buttonDTO.setCodeList(properties.getProperty(buttonDTO.getButtonEnum().getPropertyName()));
+                }
+
+//                config.setDown(properties.getProperty("button.down"));
+//                config.setLeft(properties.getProperty("button.left"));
+//                config.setRight(properties.getProperty("button.right"));
+//                config.setUp(properties.getProperty("button.up"));
+//                config.setOk(properties.getProperty("button.ok"));
+//                config.setBack(properties.getProperty("button.back"));
+//                config.setVolumeDown(properties.getProperty("button.volumeDown"));
+//                config.setVolumeUp(properties.getProperty("button.volumeUp"));
+//                config.setSubtitleScreen(properties.getProperty("button.subtitleScreen"));
+//                config.setPlayPause(properties.getProperty("button.playPause"));
+//                config.setStop(properties.getProperty("button.stop"));
+//                config.setSettings(properties.getProperty("button.settings"));
+//                config.setDisable(properties.getProperty("button.disable"));
+
                 config.password = decryptText(properties.getProperty("config.password"));
                 config.urlKODI = properties.getProperty("config.urlKODI");
                 config.user = properties.getProperty("config.user");
                 config.sistema = properties.getProperty("config.sistema");
                 config.showScreen = Boolean.parseBoolean(properties.getProperty("config.showScreen"));
-                
+
                 configuration = config;
 
             } catch (IOException e) {

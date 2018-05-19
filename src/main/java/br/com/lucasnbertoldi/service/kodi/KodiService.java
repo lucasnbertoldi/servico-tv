@@ -1,6 +1,8 @@
 package br.com.lucasnbertoldi.service.kodi;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
+import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
+import br.com.lucasnbertoldi.service.configuration.ButtonEnum;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import br.com.lucasnbertoldi.service.http.HTTPURLConnection;
@@ -12,123 +14,170 @@ import org.json.JSONObject;
 public class KodiService {
 
     private boolean disabled = false;
+    public boolean kodiIsOpen = false;
 
-    public void read(String text) {
-        ConfigurationDTO config = ConfigurationService.getConfiguration();
+    public ButtonDTO read(String text) {
+        ButtonDTO buttonSelected = null;
         if (!disabled) {
-            if (config.getDown().contains(text)) {
-                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(DOWN, "Botão Baixo", null));
-            } else if (config.getUp().contains(text)) {
-                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(UP, "Botão Cima", null));
-            } else if (config.getLeft().contains(text)) {
-                switch (kodiDTO.windowID) {
-                    case FULLSCREEN_VIDEO_WINDOW:
-                    case OSD_FULLSCREN_VIDEO_WINDOW: {
-                        int speed = kodiDTO.speed;
-                        if (speed == 0) {
-                            speed = -1;
+            for (ButtonDTO buttonDTO : ConfigurationService.buttonList) {
+                if (buttonDTO.getCodeList().contains(text)) {
+                    buttonSelected = buttonDTO;
+                    switch (buttonDTO.getButtonEnum()) {
+                        case DOWN: {
+                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(DOWN, "Botão Baixo", null));
+                            break;
                         }
-                        if (speed > 0) {
-                            speed = speed / 2;
-                        } else {
-                            speed = speed * 2;
+                        case UP: {
+                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(UP, "Botão Cima", null));
+                            break;
                         }
-                        if (speed >= MIN_SPEED) {
-                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
+                        case LEFT: {
+                            switch (kodiDTO.windowID) {
+                                case FULLSCREEN_VIDEO_WINDOW: {
+                                    int speed = kodiDTO.speed;
+                                    if (speed == 0) {
+                                        speed = -1;
+                                    }
+                                    if (speed > 0) {
+                                        speed = speed / 2;
+                                    } else {
+                                        speed = speed * 2;
+                                    }
+                                    if (speed >= MIN_SPEED) {
+                                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
+                                    }
+                                    break;
+                                }
+                                default: {
+                                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(LEFT, "Botão Esquerda", null));
+                                }
+                            }
+                            break;
                         }
-                        break;
-                    }
-                    default: {
-                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(LEFT, "Botão Esquerda", null));
-                    }
-                }
-            } else if (config.getRight().contains(text)) {
-                switch (kodiDTO.windowID) {
-                    case FULLSCREEN_VIDEO_WINDOW:
-                    case OSD_FULLSCREN_VIDEO_WINDOW: {
-                        int speed = kodiDTO.speed;
-                        if (speed == 0) {
-                            speed = 1;
+                        case RIGHT: {
+                            switch (kodiDTO.windowID) {
+                                case FULLSCREEN_VIDEO_WINDOW: {
+                                    int speed = kodiDTO.speed;
+                                    if (speed == 0) {
+                                        speed = 1;
+                                    }
+                                    if (speed < 0) {
+                                        speed = speed / 2;
+                                    } else {
+                                        speed = speed * 2;
+                                    }
+                                    if (speed <= MAX_SPEED) {
+                                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
+                                    }
+                                    break;
+                                }
+                                default: {
+                                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(RIGHT, "Botão Direita", null));
+                                }
+                            }
+                            break;
                         }
-                        if (speed < 0) {
-                            speed = speed / 2;
-                        } else {
-                            speed = speed * 2;
+                        case BACK: {
+                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(BACK, "Botão Voltar", null));
+                            break;
                         }
-                        if (speed >= MIN_SPEED) {
-                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
+                        case VOLUME_UP: {
+                            if (kodiDTO.volume != MAX_VOLUME) {
+                                int newVolume = kodiDTO.volume + RANGE_VOLUME;
+                                if (newVolume > MAX_VOLUME) {
+                                    newVolume = MAX_VOLUME;
+                                }
+                                String result = makeRequest(SHOW_MESSAGE, new RequestKodiDTO(VOLUME, "Botão Volume Mais", new JSONArray().put(0, newVolume).toString()))[0].response;
+                                if (result != null) {
+                                    kodiDTO.volume = Integer.parseInt(result);
+                                }
+                            }
+                            break;
                         }
-                        break;
+                        case VOLUME_DOWN: {
+                            if (kodiDTO.volume != MIN_VOLUME) {
+                                int newVolume = kodiDTO.volume - RANGE_VOLUME;
+                                if (newVolume < MIN_VOLUME) {
+                                    newVolume = MIN_VOLUME;
+                                }
+                                String result = makeRequest(SHOW_MESSAGE, new RequestKodiDTO(VOLUME, "Botão Volume Menos", new JSONArray().put(0, newVolume).toString()))[0].response;
+                                if (result != null) {
+                                    kodiDTO.volume = Integer.parseInt(result);
+                                }
+                            }
+                            break;
+                        }
+                        case OK: {
+                            switch (kodiDTO.windowID) {
+                                case FULLSCREEN_VIDEO_WINDOW:
+                                case AUDIO_VIEW:{
+                                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(PLAY_PAUSE, "Pausar/Continuar", "[" + kodiDTO.playerID + "]"));
+                                    break;
+                                }
+                                default: {
+                                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(OK, "Botão Selecionar", null));
+                                }
+                            }
+                            break;
+                        }
+                        case PLAY_PAUSE: {
+                            break;
+                        }
+                        case SETTINGS: {
+
+                            if (kodiDTO.windowID == FULLSCREEN_VIDEO_WINDOW || kodiDTO.windowID == AUDIO_VIEW) {
+                                makeRequest(SHOW_MESSAGE, new RequestKodiDTO("Input.ShowOSD", "Exibir opções do Player", null));
+                            } else {
+                                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(CONTEXT_MENU, "Botão de Opções", null));
+                            }
+                            break;
+                        }
+                        case SUBTITLE_SCREEN: {
+                            if (kodiDTO.playerID != null && kodiDTO.playerType.equals(PLAYER_VIDEO)) {
+                                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(ACTIVATE_WINDOW, "Botão Tela Legenda", "{'window':'subtitlesearch'}"));
+                            }
+                            break;
+                        }
+                        case STOP: {
+                            if (kodiDTO.playerID != null) {
+                                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(STOP, "Parar", "[" + kodiDTO.playerID + "]"));
+                            }
+                            break;
+                        }
+                        case DISABLE: {
+                            disabled = true;
+                            ServicoLucasTV.info("Controle Remoto Desativado");
+                            sendAMessage("Controle Remoto Desativado.");
+                            break;
+                        }
+                        case RESTART :{
+                            makeRequest(SHOW_MESSAGE, new RequestKodiDTO("System.Reboot", "Reiniciar Sistema", null));
+                            break;
+                        }
+                        default: {
+                        }
                     }
-                    default: {
-                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(RIGHT, "Botão Direita", null));
-                    }
+
                 }
-            } else if (config.getOk().contains(text)) {
-                switch (kodiDTO.windowID) {
-                    case FULLSCREEN_VIDEO_WINDOW:
-                    case OSD_FULLSCREN_VIDEO_WINDOW:
-                    case AUDIO_VIEW:
-                    case AUDIO_VIEW2: {
-                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(PLAY_PAUSE, "Pausar/Continuar", "[" + kodiDTO.playerID + "]"));
-                        break;
-                    }
-                    default: {
-                        makeRequest(SHOW_MESSAGE, new RequestKodiDTO(OK, "Botão Selecionar", null));
-                    }
-                }
-            } else if (config.getBack().contains(text)) {
-                makeRequest(SHOW_MESSAGE, new RequestKodiDTO(BACK, "Botão Voltar", null));
-            } else if (config.getVolumeUp().contains(text)) {
-                if (kodiDTO.volume != MAX_VOLUME) {
-                    int newVolume = kodiDTO.volume + RANGE_VOLUME;
-                    if (newVolume > MAX_VOLUME) {
-                        newVolume = MAX_VOLUME;
-                    }
-                    String result = makeRequest(SHOW_MESSAGE, new RequestKodiDTO(VOLUME, "Botão Volume Mais", new JSONArray().put(0, newVolume).toString()))[0].response;
-                    if (result != null) {
-                        kodiDTO.volume = Integer.parseInt(result);
-                    }
-                }
-            } else if (config.getVolumeDown().contains(text)) {
-                if (kodiDTO.volume != MIN_VOLUME) {
-                    int newVolume = kodiDTO.volume - RANGE_VOLUME;
-                    if (newVolume < MIN_VOLUME) {
-                        newVolume = MIN_VOLUME;
-                    }
-                    String result = makeRequest(SHOW_MESSAGE, new RequestKodiDTO(VOLUME, "Botão Volume Menos", new JSONArray().put(0, newVolume).toString()))[0].response;
-                    if (result != null) {
-                        kodiDTO.volume = Integer.parseInt(result);
-                    }
-                }
-            } else if (config.getSubtitleScreen().contains(text)) {
-                if (kodiDTO.playerID != null && kodiDTO.playerType.equals(PLAYER_VIDEO)) {
-                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(ACTIVATE_WINDOW, "Botão Tela Legenda", "{'window':'subtitlesearch'}"));
-                } else {
-                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(CONTEXT_MENU, "Botão de Opções", null));
-                }
-            } else if (config.getStop().contains(text)) {
-                if (kodiDTO.playerID != null) {
-                    makeRequest(SHOW_MESSAGE, new RequestKodiDTO(STOP, "Parar", "[" + kodiDTO.playerID + "]"));
-                }
-            } else if (config.getDisable().contains(text)) {
-                disabled = true;
-                ServicoLucasTV.info("Controle Remoto Desativado");
-                sendAMessage("Controle Remoto Desativado.");
-            } else {
-                ServicoLucasTV.warning("Comando não encontrado. Comando: " + text);
             }
         } else {
-            if (config.getDisable().contains(text)) {
+            ButtonDTO buttonDisableDTO = null;
+            for (ButtonDTO buttonDTO : ConfigurationService.buttonList) {
+                if (buttonDTO.equals(ButtonEnum.DISABLE)) {
+                    buttonDisableDTO = buttonDTO;
+                    break;
+                }
+            }
+            if (buttonDisableDTO.getCodeList().contains(text)) {
                 ServicoLucasTV.info("Controle Remoto Ativado");
                 sendAMessage("Controle Remoto Ativado.");
                 disabled = false;
             }
         }
-
+        return buttonSelected;
     }
 
-    private void sendAMessage(String message) {
+    public void sendAMessage(String message) {
         makeRequest(false, new RequestKodiDTO(NOTIFY, "Notificação", "{\"title\":\"" + ServicoLucasTV.NOME_SOFTWARE + "\", \"message\":\"" + message + "\"}"));
     }
 
@@ -211,6 +260,7 @@ public class KodiService {
 
         if (!requestGuiProperties.equals("")) {
             JSONObject results = new JSONObject(requestGuiProperties.response);
+            System.out.println(results);
             kodiDTO.windowID = results.getJSONObject("currentwindow").getInt("id");
         }
     }
@@ -262,7 +312,7 @@ public class KodiService {
     private final int FULLSCREEN_VIDEO_WINDOW = 12005;
     private final int OSD_FULLSCREN_VIDEO_WINDOW = 12901;
     private final int AUDIO_VIEW = 12006;
-    private final int AUDIO_VIEW2 = 10120;
+    private final int AUDIO_OSD = 10120;
 
     private final String PLAY_PAUSE = "Player.PlayPause";
     private final String STOP = "Player.Stop";

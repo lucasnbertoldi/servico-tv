@@ -4,8 +4,12 @@ import br.com.lucasnbertoldi.service.ThreadService;
 import br.com.lucasnbertoldi.gui.MainView;
 import br.com.lucasnbertoldi.gui.SystemTrayUtils;
 import br.com.lucasnbertoldi.gui.ViewUtils;
+import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
+import br.com.lucasnbertoldi.service.configuration.ButtonEnum;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
+import java.util.Arrays;
+import java.util.EnumSet;
 import org.apache.log4j.Logger;
 
 public class ServicoLucasTV {
@@ -18,6 +22,12 @@ public class ServicoLucasTV {
 
     public static void main(String[] args) {
 
+        EnumSet.allOf(ButtonEnum.class)
+                .forEach(button -> {
+                    ButtonDTO buttonDTO = new ButtonDTO(button);
+                    ConfigurationService.buttonList.add(buttonDTO);
+                });
+        
         ViewUtils.setarVisualPadrao();
 
         mainView = new MainView();

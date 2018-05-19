@@ -109,19 +109,19 @@ public class ViewUtils {
 
     public static void setConfigurationFields() {
         ConfigurationDTO config = ConfigurationService.getConfiguration();
-        ServicoLucasTV.mainView.getUpField().setText(config.getTextUp());
-        ServicoLucasTV.mainView.getDownField().setText(config.getTextDown());
-        ServicoLucasTV.mainView.getLeftField().setText(config.getTextLeft());
-        ServicoLucasTV.mainView.getRightField().setText(config.getTextRight());
-        ServicoLucasTV.mainView.getOkField().setText(config.getTextOk());
-        ServicoLucasTV.mainView.getBackField().setText(config.getTextBack());
-        ServicoLucasTV.mainView.getVolumeDownsField().setText(config.getTextVolumeDown());
-        ServicoLucasTV.mainView.getVolumeUpField().setText(config.getTextVolumeUp());
-        ServicoLucasTV.mainView.getSubtitleScreenField().setText(config.getTextSubtitleScreen());
-        ServicoLucasTV.mainView.getPlayPauseField().setText(config.getTextPlayPause());
-        ServicoLucasTV.mainView.getStopField().setText(config.getTextStop());
-        ServicoLucasTV.mainView.getSettingsField().setText(config.getTextSettings());
-        ServicoLucasTV.mainView.getDisableField().setText(config.getTextDisable());
+//        ServicoLucasTV.mainView.getUpField().setText(config.getTextUp());
+//        ServicoLucasTV.mainView.getDownField().setText(config.getTextDown());
+//        ServicoLucasTV.mainView.getLeftField().setText(config.getTextLeft());
+//        ServicoLucasTV.mainView.getRightField().setText(config.getTextRight());
+//        ServicoLucasTV.mainView.getOkField().setText(config.getTextOk());
+//        ServicoLucasTV.mainView.getBackField().setText(config.getTextBack());
+//        ServicoLucasTV.mainView.getVolumeDownsField().setText(config.getTextVolumeDown());
+//        ServicoLucasTV.mainView.getVolumeUpField().setText(config.getTextVolumeUp());
+//        ServicoLucasTV.mainView.getSubtitleScreenField().setText(config.getTextSubtitleScreen());
+//        ServicoLucasTV.mainView.getPlayPauseField().setText(config.getTextPlayPause());
+//        ServicoLucasTV.mainView.getStopField().setText(config.getTextStop());
+//        ServicoLucasTV.mainView.getSettingsField().setText(config.getTextSettings());
+//        ServicoLucasTV.mainView.getDisableField().setText(config.getTextDisable());
 
         ServicoLucasTV.mainView.getUrlKODIField().setText(config.urlKODI);
         ServicoLucasTV.mainView.getUserField().setText(config.user);

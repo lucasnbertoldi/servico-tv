@@ -8,12 +8,15 @@ package br.com.lucasnbertoldi.service;
 import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.arduino.SerialService;
 import br.com.lucasnbertoldi.service.kodi.KodiService;
+import java.net.ConnectException;
 
 /**
  *
  * @author lukin
  */
 public class ThreadService extends Thread {
+
+    private boolean primeiraTentativaKodi = true;
 
     @Override
     public void run() {
@@ -22,7 +25,7 @@ public class ThreadService extends Thread {
         SerialService serialService = new SerialService();
         serialService.initialize(kodiService);
 
-        while (true) {            
+        while (true) {
             if (serialService.comPort == null || !serialService.comPort.isOpen()) {
                 ServicoLucasTV.error("Não foi possível se conectar com a porta serial.");
                 ServicoLucasTV.info("Preparando para novas tentativas de configuração da porta serial.");
@@ -31,13 +34,31 @@ public class ThreadService extends Thread {
             } else {
                 try {
                     kodiService.updateProperties();
-                } catch (Exception e) {
-                    ServicoLucasTV.error("Erro ao consultar informações do KODI", e);
-                    ServicoLucasTV.info("Preparando para novas para consultar informações.");
+                    if (!primeiraTentativaKodi) {
+                        ServicoLucasTV.info("O KODI está novamente aberto e funcionando o/");
+                    }
+                    kodiService.kodiIsOpen = true;
+                    primeiraTentativaKodi = true;
+                } catch (RuntimeException e) {
+                    kodiService.kodiIsOpen = false;
+                    if (e.getCause() != null) {
+                        if (e.getCause() instanceof ConnectException) {
+                            if (primeiraTentativaKodi) {
+                                ServicoLucasTV.warning("Parece que o KODI está ou foi fechado :/");
+                                primeiraTentativaKodi = false;
+                            }
+                        } else {
+                            ServicoLucasTV.error("Erro ao consultar informações do KODI :/", e);
+                            ServicoLucasTV.info("Preparando para novas para consultar informações.");
+                        }
+                    } else {
+                        ServicoLucasTV.error("Erro ao consultar informações do KODI :/", e);
+                        ServicoLucasTV.info("Preparando para novas para consultar informações.");
+                    }
                     delay(5000);
                 }
             }
-            delay(1000);
+            delay(500);
         }
     }
 

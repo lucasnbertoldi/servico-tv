@@ -6,17 +6,20 @@
 package br.com.lucasnbertoldi.gui;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
+import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import java.awt.Image;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 
 /**
  *
@@ -46,33 +49,16 @@ public class MainView extends javax.swing.JFrame {
         logTextArea = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        downField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        upField = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        rightField = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        leftField = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        okField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        backField = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        volumeDownsField = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        volumeUpField = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        settingsField = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        subtitleScreenField = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        playPauseField = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        stopField = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        disableField = new javax.swing.JTextField();
+        buttonComboBox = new javax.swing.JComboBox<>();
+        codeComboBox = new javax.swing.JComboBox<>();
+        removeCodeButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        addCodeField = new javax.swing.JTextField();
+        addCodeButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        lastButtonPressedDescription = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         urlKODIField = new javax.swing.JTextField();
         userField = new javax.swing.JTextField();
@@ -128,54 +114,15 @@ public class MainView extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(scrollLogTextArea, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                .addComponent(scrollLogTextArea, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
                 .addGap(35, 35, 35))
         );
 
         jTabbedPane1.addTab("Saída", jPanel1);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Baixo:");
-
-        downField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                downFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Cima");
-
-        upField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                upFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Direita");
-
-        rightField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rightFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Esquerda");
-
-        leftField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                leftFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("OK");
-
-        okField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                okFieldActionPerformed(evt);
+        jPanel2.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanel2ComponentShown(evt);
             }
         });
 
@@ -186,217 +133,95 @@ public class MainView extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Voltar");
-
-        backField.addActionListener(new java.awt.event.ActionListener() {
+        buttonComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 - Selecione um Botão" }));
+        buttonComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backFieldActionPerformed(evt);
+                buttonComboBoxActionPerformed(evt);
             }
         });
 
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Volume -");
+        codeComboBox.setEnabled(false);
 
-        volumeDownsField.addActionListener(new java.awt.event.ActionListener() {
+        removeCodeButton.setText("X");
+        removeCodeButton.setEnabled(false);
+        removeCodeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volumeDownsFieldActionPerformed(evt);
+                removeCodeButtonActionPerformed(evt);
             }
         });
 
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Volume +");
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Lista de Botões");
 
-        volumeUpField.addActionListener(new java.awt.event.ActionListener() {
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Lista de Códigos do Botão");
+
+        addCodeField.setEnabled(false);
+
+        addCodeButton.setText("Adicionar");
+        addCodeButton.setEnabled(false);
+        addCodeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volumeUpFieldActionPerformed(evt);
+                addCodeButtonActionPerformed(evt);
             }
         });
 
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Sinc. Leg.:");
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Adicionar Novo Código");
 
-        settingsField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                settingsFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Leg./Opções:");
-
-        subtitleScreenField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subtitleScreenFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Play/Pause:");
-
-        playPauseField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                playPauseFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Stop:");
-
-        stopField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stopFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Desativar:");
-
-        disableField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                disableFieldActionPerformed(evt);
-            }
-        });
+        lastButtonPressedDescription.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        lastButtonPressedDescription.setText(" ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(codeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(removeCodeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(playPauseField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(leftField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(subtitleScreenField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(volumeUpField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(disableField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(stopField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(volumeDownsField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(upField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(backField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(okField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(rightField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(downField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(settingsField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(100, 100, 100))
+                        .addComponent(addCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(addCodeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lastButtonPressedDescription, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(163, 163, 163))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel4)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(upField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel11)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(backField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel13)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(volumeUpField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel16)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(subtitleScreenField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel7)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(okField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel6)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(leftField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(playPauseField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(downField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(volumeDownsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(settingsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(stopField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(disableField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addComponent(buttonComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addCodeButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lastButtonPressedDescription)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(codeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removeCodeButton))
+                .addGap(44, 44, 44)
                 .addComponent(jButton1)
-                .addGap(23, 23, 23))
+                .addGap(71, 71, 71))
         );
 
         jTabbedPane1.addTab("Botões", jPanel2);
@@ -458,7 +283,7 @@ public class MainView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157))
+                .addGap(163, 163, 163))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,9 +306,9 @@ public class MainView extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sistemaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(showScreenCheckbox))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGap(57, 57, 57)
                 .addComponent(jButton2)
-                .addGap(22, 22, 22))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Configurações", jPanel3);
@@ -538,26 +363,6 @@ public class MainView extends javax.swing.JFrame {
         SystemTrayUtils.showMessage("Mensagem", "O serviço ainda está executando.", "info");
     }//GEN-LAST:event_formWindowClosing
 
-    private void downFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_downFieldActionPerformed
-
-    private void upFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_upFieldActionPerformed
-
-    private void rightFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rightFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rightFieldActionPerformed
-
-    private void leftFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leftFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_leftFieldActionPerformed
-
-    private void okFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_okFieldActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ConfigurationDTO config;
         try {
@@ -566,20 +371,7 @@ public class MainView extends javax.swing.JFrame {
             config = new ConfigurationDTO();
         }
         try {
-            config.setDown(downField.getText());
-            config.setUp(upField.getText());
-            config.setLeft(leftField.getText());
-            config.setRight(rightField.getText());
-            config.setOk(okField.getText());
-            config.setBack(backField.getText());
-            config.setVolumeUp(volumeUpField.getText());
-            config.setVolumeDown(volumeDownsField.getText());
-            config.setDisable(disableField.getText());
-            config.setPlayPause(playPauseField.getText());
-            config.setSettings(settingsField.getText());
-            config.setStop(stopField.getText());
-            config.setSubtitleScreen(subtitleScreenField.getText());
-            ConfigurationService.setConfiguration(config);
+            ConfigurationService.setConfiguration(config, buttonList);
             ServicoLucasTV.info("Configurações de botões salvas.");
             JOptionPane.showMessageDialog(this, "Configurações salvas com sucesso.", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException ex) {
@@ -603,7 +395,7 @@ public class MainView extends javax.swing.JFrame {
             config.sistema = sistemaField.getSelectedItem().toString();
             config.showScreen = showScreenCheckbox.isSelected();
 
-            ConfigurationService.setConfiguration(config);
+            ConfigurationService.setConfiguration(config, ConfigurationService.buttonList);
             ServicoLucasTV.info("Configurações gerais salvas.");
             JOptionPane.showMessageDialog(this, "Configurações salvas com sucesso.", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException ex) {
@@ -617,38 +409,6 @@ public class MainView extends javax.swing.JFrame {
     private void sistemaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sistemaFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sistemaFieldActionPerformed
-
-    private void backFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backFieldActionPerformed
-
-    private void volumeDownsFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volumeDownsFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_volumeDownsFieldActionPerformed
-
-    private void volumeUpFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volumeUpFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_volumeUpFieldActionPerformed
-
-    private void settingsFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_settingsFieldActionPerformed
-
-    private void subtitleScreenFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtitleScreenFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_subtitleScreenFieldActionPerformed
-
-    private void playPauseFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playPauseFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_playPauseFieldActionPerformed
-
-    private void stopFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stopFieldActionPerformed
-
-    private void disableFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disableFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_disableFieldActionPerformed
 
     private void showScreenCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showScreenCheckboxActionPerformed
         // TODO add your handling code here:
@@ -666,25 +426,67 @@ public class MainView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formComponentShown
 
-    public JTextField getDownField() {
-        return downField;
-    }
+    private void removeCodeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCodeButtonActionPerformed
+        buttonDTOSelected.getCodeList().remove(codeComboBox.getSelectedItem());
+        codeComboBox.removeItem(codeComboBox.getSelectedItem());
+    }//GEN-LAST:event_removeCodeButtonActionPerformed
 
-    public JTextField getLeftField() {
-        return leftField;
-    }
+    private void buttonComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonComboBoxActionPerformed
+        if (buttonComboBox.getSelectedIndex() == 0) {
+            codeComboBox.removeAllItems();
+            addCodeButton.setEnabled(false);
+            addCodeField.setEnabled(false);
+            codeComboBox.setEnabled(false);
+            removeCodeButton.setEnabled(false);
+        } else {
+            for (ButtonDTO buttonDTO : buttonList) {
+                String text = buttonDTO.getButtonEnum().getId() + " - " + buttonDTO.getButtonEnum().getDescription();
+                if (text.equals(buttonComboBox.getSelectedItem())) {
+                    buttonDTOSelected = buttonDTO;
+                    codeComboBox.removeAllItems();
+                    for (String code : buttonDTO.getCodeList()) {
+                        codeComboBox.addItem(code);
+                    }
+                    addCodeButton.setEnabled(true);
+                    addCodeField.setEnabled(true);
+                    codeComboBox.setEnabled(true);
+                    removeCodeButton.setEnabled(true);
+                }
+            }
+        }
 
-    public JTextField getOkField() {
-        return okField;
-    }
+    }//GEN-LAST:event_buttonComboBoxActionPerformed
 
-    public JTextField getRightField() {
-        return rightField;
-    }
+    private void jPanel2ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel2ComponentShown
+        buttonList = new ArrayList<>();
 
-    public JTextField getUpField() {
-        return upField;
-    }
+        for (ButtonDTO buttonDTO : ConfigurationService.buttonList) {
+            ButtonDTO newButtonDTO = new ButtonDTO(buttonDTO.getButtonEnum());
+            newButtonDTO.setCodeList(buttonDTO.getTextCodeList());
+            buttonList.add(newButtonDTO);
+        }
+
+        for (ButtonDTO buttonDTO : buttonList) {
+            buttonComboBox.addItem(buttonDTO.getButtonEnum().getId() + " - " + buttonDTO.getButtonEnum().getDescription());
+        }
+        
+        buttonComboBox.setSelectedIndex(0);
+    }//GEN-LAST:event_jPanel2ComponentShown
+
+    private void addCodeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCodeButtonActionPerformed
+        if (buttonDTOSelected.getCodeList().contains(addCodeField.getText())) {
+            JOptionPane.showMessageDialog(this, "Tá doido? Esse código já tá na lista.", "Erro", JOptionPane.WARNING_MESSAGE);
+        } else if (addCodeField.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Na boa, digita um código aí.", "Erro", JOptionPane.WARNING_MESSAGE);
+        } else {
+            buttonDTOSelected.getCodeList().add(addCodeField.getText());
+            codeComboBox.addItem(addCodeField.getText());
+            addCodeField.setText("");
+        }
+    }//GEN-LAST:event_addCodeButtonActionPerformed
+
+    ButtonDTO buttonDTOSelected;
+    List<ButtonDTO> buttonList;
 
     public JTextField getPasswordField() {
         return passwordField;
@@ -702,66 +504,35 @@ public class MainView extends javax.swing.JFrame {
         return sistemaField;
     }
 
-    public JTextField getBackField() {
-        return backField;
-    }
-
-    public JTextField getVolumeDownsField() {
-        return volumeDownsField;
-    }
-
-    public JTextField getVolumeUpField() {
-        return volumeUpField;
-    }
-
-    public JTextField getPlayPauseField() {
-        return playPauseField;
-    }
-
-    public JTextField getSettingsField() {
-        return settingsField;
-    }
-
-    public JTextField getStopField() {
-        return stopField;
-    }
-
-    public JTextField getSubtitleScreenField() {
-        return subtitleScreenField;
-    }
-
-    public JTextField getDisableField() {
-        return disableField;
-    }
-
     public JCheckBox getShowScreenCheckbox() {
         return showScreenCheckbox;
     }
 
+    public JTextField getAddCodeField() {
+        return addCodeField;
+    }
+
+    public JLabel getLastButtonPressedDescription() {
+        return lastButtonPressedDescription;
+    }
+    
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField backField;
-    private javax.swing.JTextField disableField;
-    private javax.swing.JTextField downField;
+    private javax.swing.JButton addCodeButton;
+    private javax.swing.JTextField addCodeField;
+    private javax.swing.JComboBox<String> buttonComboBox;
+    private javax.swing.JComboBox<String> codeComboBox;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -770,23 +541,15 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField leftField;
+    private javax.swing.JLabel lastButtonPressedDescription;
     protected javax.swing.JTextPane logOutputController;
     protected javax.swing.JTextPane logTextArea;
-    private javax.swing.JTextField okField;
     private javax.swing.JPasswordField passwordField;
-    private javax.swing.JTextField playPauseField;
-    private javax.swing.JTextField rightField;
+    private javax.swing.JButton removeCodeButton;
     protected javax.swing.JScrollPane scrollLogTextArea;
-    private javax.swing.JTextField settingsField;
     private javax.swing.JCheckBox showScreenCheckbox;
     private javax.swing.JComboBox<String> sistemaField;
-    private javax.swing.JTextField stopField;
-    private javax.swing.JTextField subtitleScreenField;
-    private javax.swing.JTextField upField;
     private javax.swing.JTextField urlKODIField;
     private javax.swing.JTextField userField;
-    private javax.swing.JTextField volumeDownsField;
-    private javax.swing.JTextField volumeUpField;
     // End of variables declaration//GEN-END:variables
 }

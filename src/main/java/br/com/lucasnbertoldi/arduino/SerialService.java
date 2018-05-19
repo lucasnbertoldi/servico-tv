@@ -2,10 +2,12 @@ package br.com.lucasnbertoldi.arduino;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.gui.ViewUtils;
+import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
 import br.com.lucasnbertoldi.service.kodi.KodiService;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import java.io.IOException;
 
 public class SerialService {
 
@@ -37,12 +39,40 @@ public class SerialService {
                 }
                 byte[] data = event.getReceivedData();
                 String string = new String(data);
+                ButtonDTO buttonSelected = null;
                 try {
-                    kodiService.read(string);
+                    buttonSelected = kodiService.read(string);
                 } catch (Exception e) {
                     ServicoLucasTV.error("O comando " + string + " foi recebido, mas ocorreu um erro ao processar a informação.", e);
                 }
-                ViewUtils.printControllerOutput(string, "info");
+                ViewUtils.printControllerOutput(buttonSelected == null ? string : "Botao: " + buttonSelected.getButtonEnum().getDescription() + " - " + string + "", "info");
+                if (buttonSelected != null) {
+                    ServicoLucasTV.mainView.getLastButtonPressedDescription().setText(buttonSelected.getButtonEnum().getDescription());
+                    switch (buttonSelected.getButtonEnum()) {
+                        case OPEN_KODI: {
+                            if (kodiService.kodiIsOpen) {
+                                String message = "Ué, o KODI já tá aberto o_o";
+                                kodiService.sendAMessage(message);
+                                ServicoLucasTV.warning(message);
+                            } else {
+                                if (ServicoLucasTV.SISTEMA.equals("Linux")) {
+                                    try {
+                                        Runtime.getRuntime().exec("kodi");
+                                        ServicoLucasTV.info("Abrindo o KODI...");
+                                    } catch (IOException ex) {
+                                        ServicoLucasTV.error("Foi mal, mas aconteceu um erro ao tentar abrir o KODI :/", ex);
+                                    }
+                                } else {
+                                    ServicoLucasTV.warning("Foi mal, mas a funcionalidade de abrir o KODI não funciona para o sistema operacional " + ServicoLucasTV.SISTEMA + " :/");
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    ServicoLucasTV.warning("Comando não encontrado. Comando: " + string);
+                    ServicoLucasTV.mainView.getLastButtonPressedDescription().setText(" ");
+                }
+                ServicoLucasTV.mainView.getAddCodeField().setText(string);
             }
         });
     }
