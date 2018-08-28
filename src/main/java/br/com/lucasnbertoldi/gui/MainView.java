@@ -16,6 +16,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -70,10 +71,13 @@ public class MainView extends javax.swing.JFrame {
         sistemaField = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         showScreenCheckbox = new javax.swing.JCheckBox();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        logOutputController = new javax.swing.JTextPane();
-        jLabel20 = new javax.swing.JLabel();
+        showLogControllerCheckBox = new javax.swing.JCheckBox();
+        jLabel11 = new javax.swing.JLabel();
+        delayKodiField = new javax.swing.JFormattedTextField();
+        jLabel12 = new javax.swing.JLabel();
+        delayNumberField = new javax.swing.JFormattedTextField();
+        jLabel13 = new javax.swing.JLabel();
+        delayMouseField = new javax.swing.JFormattedTextField();
 
         setTitle("Serviço Lucas TV");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -259,6 +263,28 @@ public class MainView extends javax.swing.JFrame {
             }
         });
 
+        showLogControllerCheckBox.setText("Exibir Log de Requisições do Controle");
+        showLogControllerCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showLogControllerCheckBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Delay para Abrir Kodi");
+
+        delayKodiField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Delay para Movimentar Mouse");
+
+        delayNumberField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Delay para Tecla Numérica");
+
+        delayMouseField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -266,22 +292,33 @@ public class MainView extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(urlKODIField)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(userField)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sistemaField, 0, 208, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(passwordField, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(showScreenCheckbox, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))))
-                .addGap(30, 30, 30))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(22, 22, 22))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(urlKODIField)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(userField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sistemaField, javax.swing.GroupLayout.Alignment.LEADING, 0, 208, Short.MAX_VALUE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(showLogControllerCheckBox, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(delayMouseField, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(passwordField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(showScreenCheckbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(delayKodiField)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                                    .addComponent(delayNumberField, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(30, 30, 30))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(170, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(163, 163, 163))
         );
@@ -301,48 +338,31 @@ public class MainView extends javax.swing.JFrame {
                     .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sistemaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delayKodiField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(delayNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delayMouseField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(showLogControllerCheckBox)
                     .addComponent(showScreenCheckbox))
-                .addGap(57, 57, 57)
+                .addGap(29, 29, 29)
                 .addComponent(jButton2)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         jTabbedPane1.addTab("Configurações", jPanel3);
-
-        logOutputController.setEditable(false);
-        logOutputController.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        jScrollPane1.setViewportView(logOutputController);
-
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("Saída:");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel20)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-        );
-
-        jTabbedPane1.addTab("Saída Controle", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -394,11 +414,15 @@ public class MainView extends javax.swing.JFrame {
             config.user = userField.getText();
             config.sistema = sistemaField.getSelectedItem().toString();
             config.showScreen = showScreenCheckbox.isSelected();
+            config.showControllerLOG = showLogControllerCheckBox.isSelected();
+            config.delayMouse = Integer.parseInt(delayMouseField.getText());
+            config.delayOpenKodi = Integer.parseInt(delayKodiField.getText());
+            config.delayNumber = Integer.parseInt(delayNumberField.getText());
 
             ConfigurationService.setConfiguration(config, ConfigurationService.buttonList);
             ServicoLucasTV.info("Configurações gerais salvas.");
             JOptionPane.showMessageDialog(this, "Configurações salvas com sucesso.", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
-        } catch (IOException ex) {
+        } catch (NumberFormatException | IOException ex) {
             ServicoLucasTV.error("Erro ao Salvar Configurações.", ex);
             JOptionPane.showMessageDialog(this, "Erro ao salvar configurações.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
@@ -469,7 +493,7 @@ public class MainView extends javax.swing.JFrame {
         for (ButtonDTO buttonDTO : buttonList) {
             buttonComboBox.addItem(buttonDTO.getButtonEnum().getId() + " - " + buttonDTO.getButtonEnum().getDescription());
         }
-        
+
         buttonComboBox.setSelectedIndex(0);
     }//GEN-LAST:event_jPanel2ComponentShown
 
@@ -484,6 +508,10 @@ public class MainView extends javax.swing.JFrame {
             addCodeField.setText("");
         }
     }//GEN-LAST:event_addCodeButtonActionPerformed
+
+    private void showLogControllerCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showLogControllerCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_showLogControllerCheckBoxActionPerformed
 
     ButtonDTO buttonDTOSelected;
     List<ButtonDTO> buttonList;
@@ -515,8 +543,22 @@ public class MainView extends javax.swing.JFrame {
     public JLabel getLastButtonPressedDescription() {
         return lastButtonPressedDescription;
     }
-    
-    
+
+    public JCheckBox getShowLogCheckBox() {
+        return showLogControllerCheckBox;
+    }
+
+    public JFormattedTextField getDelayKodiField() {
+        return delayKodiField;
+    }
+
+    public JFormattedTextField getDelayMouseField() {
+        return delayMouseField;
+    }
+
+    public JFormattedTextField getDelayNumberField() {
+        return delayNumberField;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -524,12 +566,17 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JTextField addCodeField;
     private javax.swing.JComboBox<String> buttonComboBox;
     private javax.swing.JComboBox<String> codeComboBox;
+    private javax.swing.JFormattedTextField delayKodiField;
+    private javax.swing.JFormattedTextField delayMouseField;
+    private javax.swing.JFormattedTextField delayNumberField;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -538,15 +585,13 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lastButtonPressedDescription;
-    protected javax.swing.JTextPane logOutputController;
     protected javax.swing.JTextPane logTextArea;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JButton removeCodeButton;
     protected javax.swing.JScrollPane scrollLogTextArea;
+    private javax.swing.JCheckBox showLogControllerCheckBox;
     private javax.swing.JCheckBox showScreenCheckbox;
     private javax.swing.JComboBox<String> sistemaField;
     private javax.swing.JTextField urlKODIField;

@@ -25,12 +25,21 @@ public class ConfigurationService {
     private static final String PATH_FILE = "/servico.properties";
 
     private static ConfigurationDTO configuration;
-    
-     public static List<ButtonDTO> buttonList = new ArrayList<>();
+
+    public static List<ButtonDTO> buttonList = new ArrayList<>();
+
+    private static String PATH_SOFTWARE;
+
+    public static String getSoftwareFolderName() {
+        if (PATH_SOFTWARE == null) {
+            PATH_SOFTWARE = System.getProperty("user.dir");
+        }
+        return PATH_SOFTWARE;
+    }
 
     public static void setConfiguration(ConfigurationDTO config, List<ButtonDTO> newButtonList) throws IOException {
 
-        String path = new File(".").getCanonicalPath();
+        String path = new File(getSoftwareFolderName()).getCanonicalPath();
 
         Properties properties = new Properties();
 
@@ -40,27 +49,16 @@ public class ConfigurationService {
         properties.setProperty("config.urlKODI", config.urlKODI);
         properties.setProperty("config.sistema", config.sistema);
         properties.setProperty("config.showScreen", config.showScreen + "");
-        
+        properties.setProperty("config.showControllerLOG", config.showControllerLOG + "");
+        properties.setProperty("config.delayMouse", config.delayMouse + "");
+        properties.setProperty("config.delayNumber", config.delayNumber + "");
+        properties.setProperty("config.delayOpenKodi", config.delayOpenKodi + "");
+
         for (ButtonDTO buttonDTO : newButtonList) {
             properties.setProperty(buttonDTO.getButtonEnum().getPropertyName(), buttonDTO.getTextCodeList());
         }
-        
+
         buttonList = newButtonList;
-        
-//
-//        properties.setProperty("button.up", config.getTextUp());
-//        properties.setProperty("button.down", config.getTextDown());
-//        properties.setProperty("button.left", config.getTextLeft());
-//        properties.setProperty("button.right", config.getTextRight());
-//        properties.setProperty("button.ok", config.getTextOk());
-//        properties.setProperty("button.back", config.getTextBack());
-//        properties.setProperty("button.volumeUp", config.getTextVolumeUp());
-//        properties.setProperty("button.volumeDown", config.getTextVolumeDown());
-//        properties.setProperty("button.disable", config.getTextDisable());
-//        properties.setProperty("button.settings", config.getTextSettings());
-//        properties.setProperty("button.playPause", config.getTextPlayPause());
-//        properties.setProperty("button.stop", config.getTextStop());
-//        properties.setProperty("button.subtitleScreen", config.getTextSubtitleScreen());
 
         try {
             //grava os dados no arquivo
@@ -87,7 +85,7 @@ public class ConfigurationService {
         } else {
             String path;
             try {
-                path = new File(".").getCanonicalPath();
+                path = new File(getSoftwareFolderName()).getCanonicalPath();
             } catch (IOException ex) {
                 throw new RuntimeException("Erro ao encontrar o caminho do arquivo.", ex);
             }
@@ -101,30 +99,20 @@ public class ConfigurationService {
                 FileInputStream fis = new FileInputStream(path + PATH_FILE);
                 //metodo load faz a leitura atraves do objeto fis
                 properties.load(fis);
-                
+
                 for (ButtonDTO buttonDTO : buttonList) {
                     buttonDTO.setCodeList(properties.getProperty(buttonDTO.getButtonEnum().getPropertyName()));
                 }
-
-//                config.setDown(properties.getProperty("button.down"));
-//                config.setLeft(properties.getProperty("button.left"));
-//                config.setRight(properties.getProperty("button.right"));
-//                config.setUp(properties.getProperty("button.up"));
-//                config.setOk(properties.getProperty("button.ok"));
-//                config.setBack(properties.getProperty("button.back"));
-//                config.setVolumeDown(properties.getProperty("button.volumeDown"));
-//                config.setVolumeUp(properties.getProperty("button.volumeUp"));
-//                config.setSubtitleScreen(properties.getProperty("button.subtitleScreen"));
-//                config.setPlayPause(properties.getProperty("button.playPause"));
-//                config.setStop(properties.getProperty("button.stop"));
-//                config.setSettings(properties.getProperty("button.settings"));
-//                config.setDisable(properties.getProperty("button.disable"));
 
                 config.password = decryptText(properties.getProperty("config.password"));
                 config.urlKODI = properties.getProperty("config.urlKODI");
                 config.user = properties.getProperty("config.user");
                 config.sistema = properties.getProperty("config.sistema");
                 config.showScreen = Boolean.parseBoolean(properties.getProperty("config.showScreen"));
+                config.showControllerLOG = Boolean.parseBoolean(properties.getProperty("config.showControllerLOG"));
+                config.delayMouse = Integer.parseInt(properties.getProperty("config.delayMouse") == null ? "0" : properties.getProperty("config.delayMouse"));
+                config.delayNumber = Integer.parseInt(properties.getProperty("config.delayNumber") == null ? "0" : properties.getProperty("config.delayNumber"));
+                config.delayOpenKodi = Integer.parseInt(properties.getProperty("config.delayOpenKodi") == null ? "0" : properties.getProperty("config.delayOpenKodi"));
 
                 configuration = config;
 

@@ -22,6 +22,8 @@ import org.apache.commons.io.IOUtils;
 public class SystemTrayUtils {
 
     public static final String PATH_ICONE_MENOR = "img/icone-menor.png";
+    
+    private static Notify notify;
 
     public static void createSystemTrayIconDorkBox() {
         if (ServicoLucasTV.SISTEMA.equals("Linux")) {
@@ -134,8 +136,8 @@ public class SystemTrayUtils {
         }
     }
 
-    public static void showMessage(String title, String text, String type) {
-        Notify notify = Notify.create().text(text).title(title).onAction((Notify t) -> {
+    public static void  showMessage(String title, String text, String type) {
+        notify = Notify.create().text(text).title(title).onAction((Notify t) -> {
             ServicoLucasTV.mainView.setVisible(true);
         }).hideAfter(3000);
         String sistema = System.getProperty("os.name");

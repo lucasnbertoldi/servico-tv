@@ -25,7 +25,8 @@ public enum ButtonEnum {
     NINE(22, "Número 9", "button.nine"),
     ZERO(23, "Número 0", "button.zero"),
     RESTART(24, "Reiniciar Sistema", "button.restart"),
-    OPEN_KODI(25, "Abrir Kodi", "button.openKodi");
+    OPEN_KODI(25, "Abrir Kodi", "button.openKodi"),
+    SWITCH_MODE(26, "Alterar Modo", "button.switchMode");
 
     private ButtonEnum(int id, String description, String propertyName) {
         this.id = id;

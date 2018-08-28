@@ -25,6 +25,10 @@ public class ConfigurationDTO {
     public String urlKODI;
     public String sistema;
     public boolean showScreen;
+    public boolean showControllerLOG;
+    public int delayMouse;
+    public int delayNumber;
+    public int delayOpenKodi;
 
     public ConfigurationDTO() {
         this.up = new ArrayList<>();
@@ -45,7 +49,10 @@ public class ConfigurationDTO {
         this.password = "";
         this.sistema = "Windows";
         this.showScreen = true;
-
+        this.showControllerLOG = true;
+        this.delayMouse = 400;
+        this.delayNumber = 1000;
+        this.delayOpenKodi = 2000;
     }
 
     private List<String> convertStringToArray(String text) {
@@ -114,7 +121,7 @@ public class ConfigurationDTO {
 
     public void setDisable(String disable) {
         this.disable = convertStringToArray(disable);
-    }   
+    }
 
     public String getTextUp() {
         return convertArrayToString(up);
@@ -147,8 +154,8 @@ public class ConfigurationDTO {
     public String getTextVolumeDown() {
         return convertArrayToString(volumeDown);
     }
-    
-        public String getTextSubtitleScreen() {
+
+    public String getTextSubtitleScreen() {
         return convertArrayToString(subtitleScreen);
     }
 

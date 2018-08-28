@@ -17,6 +17,7 @@ import java.net.ConnectException;
 public class ThreadService extends Thread {
 
     private boolean primeiraTentativaKodi = true;
+    private boolean mostrarPrimeiraMensagem = true;
 
     @Override
     public void run() {
@@ -33,14 +34,16 @@ public class ThreadService extends Thread {
                 serialService.initialize(kodiService);
             } else {
                 try {
-                    kodiService.updateProperties();
+                    kodiService.updateProperties(mostrarPrimeiraMensagem);
                     if (!primeiraTentativaKodi) {
                         ServicoLucasTV.info("O KODI está novamente aberto e funcionando o/");
                     }
                     kodiService.kodiIsOpen = true;
                     primeiraTentativaKodi = true;
+                    mostrarPrimeiraMensagem = false;
                 } catch (RuntimeException e) {
                     kodiService.kodiIsOpen = false;
+                    mostrarPrimeiraMensagem = true;
                     if (e.getCause() != null) {
                         if (e.getCause() instanceof ConnectException) {
                             if (primeiraTentativaKodi) {
