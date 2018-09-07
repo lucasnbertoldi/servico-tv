@@ -26,7 +26,8 @@ public enum ButtonEnum {
     ZERO(23, "Número 0", "button.zero"),
     RESTART(24, "Reiniciar Sistema", "button.restart"),
     OPEN_KODI(25, "Abrir Kodi", "button.openKodi"),
-    SWITCH_MODE(26, "Alterar Modo", "button.switchMode");
+    SWITCH_MODE(26, "Alterar Modo", "button.switchMode"),
+    BACKSPACE(29, "Backspace", "button.backspace");
 
     private ButtonEnum(int id, String description, String propertyName) {
         this.id = id;
@@ -39,7 +40,7 @@ public enum ButtonEnum {
     private final String propertyName;
 
     public boolean equals(ButtonEnum buttonEnum) {
-        return this.id == buttonEnum.id;
+        return buttonEnum == null ? false : this.id == buttonEnum.id;
     }
 
     public String getPropertyName() {

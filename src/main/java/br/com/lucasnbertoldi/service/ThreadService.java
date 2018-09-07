@@ -9,6 +9,7 @@ import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.arduino.SerialService;
 import br.com.lucasnbertoldi.service.kodi.KodiService;
 import java.net.ConnectException;
+import java.net.SocketTimeoutException;
 
 /**
  *
@@ -45,7 +46,7 @@ public class ThreadService extends Thread {
                     kodiService.kodiIsOpen = false;
                     mostrarPrimeiraMensagem = true;
                     if (e.getCause() != null) {
-                        if (e.getCause() instanceof ConnectException) {
+                        if (e.getCause() instanceof ConnectException ||  e.getCause() instanceof SocketTimeoutException) {
                             if (primeiraTentativaKodi) {
                                 ServicoLucasTV.warning("Parece que o KODI está ou foi fechado :/");
                                 primeiraTentativaKodi = false;

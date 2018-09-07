@@ -6,6 +6,7 @@ import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
 import br.com.lucasnbertoldi.service.configuration.ButtonEnum;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import br.com.lucasnbertoldi.service.kodi.KodiService;
+import br.com.lucasnbertoldi.service.numerickeyboard.NumericKeyboardService;
 import java.awt.AWTException;
 import java.awt.MouseInfo;
 import java.awt.Robot;
@@ -58,7 +59,8 @@ public class SystemService {
             case LEFT:
             case RIGHT:
             case OK:
-            case BACK: {
+            case BACK:
+            case BACKSPACE: {
                 executeRobot(buttonSelected.getButtonEnum());
                 break;
             }
@@ -81,6 +83,9 @@ public class SystemService {
                 SystemTrayUtils.showMessage("Mensagem", "Modo do controle alterado para " + mode.description + ".", "info");
                 showLOGController(ButtonEnum.SWITCH_MODE.getDescription() + " - " + mode.description);
                 break;
+            }
+            default: {
+                NumericKeyboardService.readKeyBoard(buttonSelected.getButtonEnum());
             }
 
         }
@@ -175,6 +180,13 @@ public class SystemService {
                     if (mode.equals(ModeButton.MOUSE_MODE)) {
                         robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
                         robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+                    }
+                    break;
+                }
+                case BACKSPACE: {
+                    if (mode.equals(ModeButton.KEYBOARD_MODE)) {
+                        robot.keyPress(KeyEvent.VK_BACK_SPACE);
+                        robot.keyRelease(KeyEvent.VK_BACK_SPACE);
                     }
                     break;
                 }

@@ -56,20 +56,21 @@ public class SerialService {
                             }
                         }
                     } else {
-                        if (!buttonSelected.getButtonEnum().equals(ButtonEnum.DISABLE)) {
-                            if (!kodiService.kodiIsOpen) {
-                                SystemTrayUtils.showMessage("Mensagem", "O controle está desativado.", "warning");
-                            } else {
-                                kodiService.sendAMessage("O controle está desativado.");
+                        if (buttonSelected != null) {
+                            if (!buttonSelected.getButtonEnum().equals(ButtonEnum.DISABLE)) {
+                                if (!kodiService.kodiIsOpen) {
+                                    SystemTrayUtils.showMessage("Mensagem", "O controle está desativado.", "warning");
+                                } else {
+                                    kodiService.sendAMessage("O controle está desativado.");
+                                }
                             }
                         }
-
                     }
                     ServicoLucasTV.mainView.getAddCodeField().setText(string);
                     if (buttonSelected == null) {
                         if (ConfigurationService.getConfiguration().showControllerLOG) {
                             ServicoLucasTV.warning("Comando não encontrado. Comando: " + string);
-                        }                        
+                        }
                         ServicoLucasTV.mainView.getLastButtonPressedDescription().setText(" ");
                     } else {
                         ServicoLucasTV.mainView.getLastButtonPressedDescription().setText(buttonSelected.getButtonEnum().getDescription());

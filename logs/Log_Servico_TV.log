@@ -8081,3 +8081,1683 @@ java.lang.NumberFormatException: null
 2018-08-28 20:22:22 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
 2018-08-28 20:22:28 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
 2018-08-28 20:22:33 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 21:51:21 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 21:51:21 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 21:51:22 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 21:51:22 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 21:51:29 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:51:31 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:51:32 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:51:33 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65537
+2018-08-28 21:51:38 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:51:38 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:51:59 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:51:59 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:52:20 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:52:20 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:52:40 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:52:40 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:53:01 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:53:01 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:53:21 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:53:21 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:53:26 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Mouse realizada com sucesso.
+2018-08-28 21:53:28 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:29 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:29 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:29 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:29 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:30 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:30 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:30 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:30 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:30 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:31 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:53:31 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:53:31 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:32 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:32 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:32 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:32 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:32 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:33 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:33 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:33 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:33 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:33 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:34 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:34 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:34 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:34 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:35 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:53:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:37 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:37 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:53:42 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:53:42 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:53:47 INFO  ServicoLucasTV:69 - Configurações gerais salvas.
+2018-08-28 21:54:02 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:54:02 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:54:23 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:54:23 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:54:43 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:54:43 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:54:43 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:54:43 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:54:43 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:54:43 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:54:44 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:54:44 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:44 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:44 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:45 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:45 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:45 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:46 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:46 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:46 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:46 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:46 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:47 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:47 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:47 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:47 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:47 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:48 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:48 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:48 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:54:48 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:49 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:49 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:49 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:49 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:54:50 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:54:50 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:54:50 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:54:50 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:54:51 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:54:52 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:52 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:52 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:53 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:53 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:54 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:54 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:54 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:55 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:55 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:55 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:56 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:56 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:56 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:56 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:56 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:54:57 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:57 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:57 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:58 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:58 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:58 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:58 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:54:59 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:59 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:59 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:59 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:54:59 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:00 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:00 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:00 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:00 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:01 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:02 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:02 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:02 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:03 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:04 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:55:04 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:55:04 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:04 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:05 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:05 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:05 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:06 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:06 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:06 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:07 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:07 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:07 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:07 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:08 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:08 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:08 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:08 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:08 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:09 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:09 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:09 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:55:09 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:55:10 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:55:10 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:55:10 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:55:10 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 21:55:13 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:14 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:14 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:14 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:15 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:15 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:15 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:16 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:16 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:16 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:17 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:17 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:17 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:55:17 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:18 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:18 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:20 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:21 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:21 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:23 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:55:23 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:24 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:24 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:55:24 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:55:24 INFO  ServicoLucasTV:69 - Requisição do tipo Confirmar realizada com sucesso.
+2018-08-28 21:55:29 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Rodinha Mouse realizada com sucesso.
+2018-08-28 21:55:31 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Teclado realizada com sucesso.
+2018-08-28 21:55:32 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:33 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:33 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:33 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:34 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:34 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:34 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:55:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:35 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:36 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:37 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:37 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 21:55:45 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:55:45 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:56:05 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:56:05 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:56:19 INFO  ServicoLucasTV:69 - Configurações de botões salvas.
+2018-08-28 21:56:26 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:56:26 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:56:46 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:56:46 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:57:07 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:57:07 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:57:17 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65648
+2018-08-28 21:57:24 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 112
+2018-08-28 21:57:27 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:57:27 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:57:30 INFO  ServicoLucasTV:69 - Configurações de botões salvas.
+2018-08-28 21:57:34 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Mouse realizada com sucesso.
+2018-08-28 21:57:36 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Rodinha Mouse realizada com sucesso.
+2018-08-28 21:57:38 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Teclado realizada com sucesso.
+2018-08-28 21:57:40 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:57:40 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:57:41 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:57:42 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:57:42 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 21:57:44 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 21:57:48 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:57:48 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:58:01 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 1
+2018-08-28 21:58:08 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65537
+2018-08-28 21:58:08 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:58:08 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:58:16 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 2
+2018-08-28 21:58:21 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:58:22 ERROR ServicoLucasTV:59 - O comando 2 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.NullPointerException
+	at br.com.lucasnbertoldi.service.configuration.ButtonEnum.equals(ButtonEnum.java:42)
+	at br.com.lucasnbertoldi.service.numerickeyboard.NumericKeyboardService.readKeyBoard(NumericKeyboardService.java:21)
+	at br.com.lucasnbertoldi.service.SystemService.readSystemCommand(SystemService.java:87)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:55)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-28 21:58:23 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65538
+2018-08-28 21:58:29 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:58:29 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:58:32 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:58:33 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65539
+2018-08-28 21:58:39 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 3
+2018-08-28 21:58:48 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65540
+2018-08-28 21:58:49 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:58:49 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:58:57 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 4
+2018-08-28 21:59:10 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:59:10 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:59:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65541
+2018-08-28 21:59:15 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 5
+2018-08-28 21:59:24 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65542
+2018-08-28 21:59:28 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:59:29 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:59:30 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 6
+2018-08-28 21:59:30 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:59:30 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:59:37 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:59:38 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:59:39 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65543
+2018-08-28 21:59:43 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 7
+2018-08-28 21:59:51 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 21:59:51 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 21:59:52 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65544
+2018-08-28 21:59:57 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:59:58 ERROR ServicoLucasTV:59 - O comando 65544 foi recebido, mas ocorreu um erro ao processar a informação.
+java.lang.NullPointerException
+	at br.com.lucasnbertoldi.service.configuration.ButtonEnum.equals(ButtonEnum.java:42)
+	at br.com.lucasnbertoldi.service.numerickeyboard.NumericKeyboardService.readKeyBoard(NumericKeyboardService.java:21)
+	at br.com.lucasnbertoldi.service.SystemService.readSystemCommand(SystemService.java:87)
+	at br.com.lucasnbertoldi.arduino.SerialService$1.serialEvent(SerialService.java:55)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener.waitForSerialEvent(SerialPort.java:1103)
+	at com.fazecast.jSerialComm.SerialPort$SerialPortEventListener$1.run(SerialPort.java:1066)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-28 21:59:59 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 21:59:59 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 8
+2018-08-28 22:00:11 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:00:11 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:00:20 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 65545
+2018-08-28 22:00:25 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 9
+2018-08-28 22:00:28 INFO  ServicoLucasTV:69 - Configurações de botões salvas.
+2018-08-28 22:00:32 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:00:32 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:00:37 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 22:01:56 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 22:01:57 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 22:01:57 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 22:01:57 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 22:02:14 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:02:14 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:02:34 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:02:34 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:02:55 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:02:55 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:02:56 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:02:57 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:02:57 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:02:58 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:02:58 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:02:59 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:02:59 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:03:00 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:03:00 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:03:01 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:03:01 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:03:03 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:03:03 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:03:04 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:03:04 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:03:05 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:03:06 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:03:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:03:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:03:15 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:03:15 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:03:36 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:03:36 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:03:56 ERROR ServicoLucasTV:59 - Erro ao consultar informações do KODI :/
+java.lang.RuntimeException: Erro com a conexão com o servidor!
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:185)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.startRequest(HTTPURLConnection.java:107)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.makeRequest(KodiService.java:188)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.sendAMessage(KodiService.java:152)
+	at br.com.lucasnbertoldi.service.kodi.KodiService.updateProperties(KodiService.java:195)
+	at br.com.lucasnbertoldi.service.ThreadService.run(ThreadService.java:37)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at br.com.lucasnbertoldi.service.http.HTTPURLConnection.request(HTTPURLConnection.java:159)
+	... 5 more
+2018-08-28 22:03:56 INFO  ServicoLucasTV:69 - Preparando para novas para consultar informações.
+2018-08-28 22:04:06 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 22:20:09 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 22:20:10 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 22:20:11 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 22:20:11 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 22:20:18 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:20:19 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:20:19 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:20:20 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:20:20 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:20:27 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-08-28 22:20:57 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:09 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:32 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:33 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:35 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:37 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:39 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:42 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:46 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:47 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:21:52 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:24:43 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 22:24:43 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 22:24:44 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 22:24:44 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 22:24:45 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:24:52 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:24:57 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:24:59 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:05 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:12 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:19 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:19 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-08-28 22:25:25 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:29 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:25:29 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:25:30 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:25:31 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:25:31 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:25:31 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:25:32 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:32 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:25:32 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 22:25:33 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 22:25:38 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:45 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:51 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:25:58 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:04 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:26:04 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:07 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:26:11 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:17 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:24 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:30 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:37 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:43 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:50 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:26:56 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:03 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:10 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:16 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:23 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:29 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:36 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:42 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:49 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:27:55 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:02 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:08 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:15 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:21 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:28 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:34 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:41 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:47 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:28:54 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:00 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:07 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:14 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:20 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:27 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:33 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:40 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:46 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:53 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:29:59 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:06 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:12 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:19 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:25 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:32 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:38 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:45 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:51 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:30:58 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:05 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:11 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:18 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:24 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:31 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:37 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:44 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:50 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:31:57 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:03 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:10 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:16 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:23 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:29 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:36 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:42 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:49 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:32:55 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:02 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:09 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:15 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:22 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:28 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:35 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:41 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:48 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:33:54 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:34:01 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:34:07 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:34:08 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 22:34:12 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 22:44:27 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 22:44:28 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 22:44:29 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 22:44:29 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 22:44:38 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:44:38 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:44:40 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:44:41 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:44:45 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-08-28 22:44:59 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:45:13 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:45:32 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:45:33 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 22:45:34 INFO  ServicoLucasTV:69 - Requisição do tipo Ativação do Controle Remoto realizada com sucesso.
+2018-08-28 22:45:35 INFO  ServicoLucasTV:69 - Requisição do tipo Desativação do Controle Remoto realizada com sucesso.
+2018-08-28 22:56:04 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 22:56:05 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 22:56:06 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 22:56:06 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 22:56:07 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:56:13 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-08-28 22:56:18 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 22:56:38 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-08-28 23:02:50 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-08-28 23:02:50 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-08-28 23:02:51 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-08-28 23:02:51 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-08-28 23:03:01 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:07 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:08 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-08-28 23:03:18 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:41 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:41 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:44 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:45 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:45 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:46 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:52 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:52 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:03:53 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:04 INFO  ServicoLucasTV:69 - Configurações de botões salvas.
+2018-08-28 23:04:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:10 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:11 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:04:12 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:04:18 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:18 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:18 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:24 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:25 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:29 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:41 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:04:41 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:04:45 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:04:49 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:04:49 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:04:50 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:08 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:20 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:20 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:20 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:21 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:21 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:21 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:21 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:22 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:22 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:22 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:22 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:22 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:23 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:23 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:23 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:23 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:25 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:25 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:25 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:27 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:27 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:28 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:28 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:28 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:28 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:29 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:30 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:30 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:30 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:31 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:31 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:31 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:32 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:32 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:33 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:33 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:33 INFO  ServicoLucasTV:69 - Requisição do tipo Backspace realizada com sucesso.
+2018-08-28 23:05:35 INFO  ServicoLucasTV:69 - Requisição do tipo Confirmar realizada com sucesso.
+2018-08-28 23:05:43 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:45 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Mouse realizada com sucesso.
+2018-08-28 23:05:45 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Rodinha Mouse realizada com sucesso.
+2018-08-28 23:05:47 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Teclado realizada com sucesso.
+2018-08-28 23:05:49 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Mouse realizada com sucesso.
+2018-08-28 23:05:50 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:50 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:50 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:51 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:51 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:51 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:51 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:51 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:52 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:52 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:52 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:52 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:52 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:53 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:53 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:53 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:05:53 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:54 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:05:54 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:54 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:54 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:55 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:55 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:55 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:55 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:55 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:56 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:56 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:56 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:56 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:56 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:57 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:05:57 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:57 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:58 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:58 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:58 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:58 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:59 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:05:59 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:00 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:00 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:00 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:01 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:01 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:01 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:02 INFO  ServicoLucasTV:69 - Requisição do tipo Confirmar realizada com sucesso.
+2018-08-28 23:06:03 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:03 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:03 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:04 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:04 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:04 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:04 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:04 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:05 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:05 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:05 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:05 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:05 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:06 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:06 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:06 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:06 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:07 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:07 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:08 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:08 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:08 INFO  ServicoLucasTV:69 - Requisição do tipo Confirmar realizada com sucesso.
+2018-08-28 23:06:09 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:09 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:10 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:10 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:10 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:10 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:11 INFO  ServicoLucasTV:69 - Requisição do tipo Confirmar realizada com sucesso.
+2018-08-28 23:06:11 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:12 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:12 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:12 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:14 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:17 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:18 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:18 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:18 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:18 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:19 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:20 INFO  ServicoLucasTV:69 - Requisição do tipo Esquerda realizada com sucesso.
+2018-08-28 23:06:20 INFO  ServicoLucasTV:69 - Requisição do tipo Confirmar realizada com sucesso.
+2018-08-28 23:06:20 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:21 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:21 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:21 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:21 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:22 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:23 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:23 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:23 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:23 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:23 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:24 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:24 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:25 INFO  ServicoLucasTV:69 - Requisição do tipo Direita realizada com sucesso.
+2018-08-28 23:06:25 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:26 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:27 INFO  ServicoLucasTV:69 - Requisição do tipo Alterar Modo - Rodinha Mouse realizada com sucesso.
+2018-08-28 23:06:29 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:29 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:30 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:30 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:31 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:31 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:31 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:32 INFO  ServicoLucasTV:74 - Comando não encontrado. Comando: 0
+2018-08-28 23:06:33 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:34 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:34 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:35 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:35 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:36 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:39 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:39 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:40 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:40 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:41 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:41 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:42 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:42 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:43 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:43 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:44 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:45 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:45 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:46 INFO  ServicoLucasTV:69 - Requisição do tipo Baixo realizada com sucesso.
+2018-08-28 23:06:46 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:47 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:47 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:48 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:48 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:06:49 INFO  ServicoLucasTV:69 - Requisição do tipo Cima realizada com sucesso.
+2018-08-28 23:07:03 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-09-07 01:21:35 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-09-07 01:21:36 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-09-07 01:21:37 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-09-07 01:21:37 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-09-07 01:21:39 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-09-07 01:23:06 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-09-07 01:23:27 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-09-07 01:23:28 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-09-07 01:23:28 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-09-07 01:23:28 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-09-07 01:23:31 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-09-07 01:25:36 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-09-07 01:57:18 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-09-07 01:57:18 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-09-07 01:57:19 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-09-07 01:57:19 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-09-07 01:57:21 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-09-07 01:58:00 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-09-07 01:58:06 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-09-07 01:58:06 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-09-07 01:58:07 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-09-07 01:58:07 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-09-07 01:58:09 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-09-07 01:58:29 INFO  ServicoLucasTV:69 - Sistema Fechado.
+2018-09-07 02:01:47 INFO  ServicoLucasTV:24 - Sistema operacional: Windows 10
+2018-09-07 02:01:48 INFO  ServicoLucasTV:69 - Iniciando Sistema
+2018-09-07 02:01:48 INFO  ServicoLucasTV:69 - Carregando Configurações.
+2018-09-07 02:01:48 INFO  ServicoLucasTV:69 - Inicializando serial.
+2018-09-07 02:01:50 INFO  ServicoLucasTV:74 - Parece que o KODI está ou foi fechado :/
+2018-09-07 02:02:16 INFO  ServicoLucasTV:69 - Preparando para novas tentativas de configuração da porta serial.
+2018-09-07 02:02:43 INFO  ServicoLucasTV:69 - Sistema Fechado.
