@@ -4,11 +4,11 @@ import br.com.lucasnbertoldi.service.ThreadService;
 import br.com.lucasnbertoldi.gui.MainView;
 import br.com.lucasnbertoldi.gui.SystemTrayUtils;
 import br.com.lucasnbertoldi.gui.ViewUtils;
-import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
+import br.com.lucasnbertoldi.service.configuration.ButtonDTO; 
 import br.com.lucasnbertoldi.service.configuration.ButtonEnum;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationDTO;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
-import java.util.EnumSet;
+import javax.sound.sampled.LineUnavailableException;
 import org.apache.log4j.Logger;
 
 public class ServicoLucasTV {
@@ -19,13 +19,12 @@ public class ServicoLucasTV {
     public static final String NOME_SOFTWARE = "Serviço Lucas TV";
     public static String SISTEMA = "";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws LineUnavailableException {
 
-        EnumSet.allOf(ButtonEnum.class)
-                .forEach(button -> {
-                    ButtonDTO buttonDTO = new ButtonDTO(button);
-                    ConfigurationService.buttonList.add(buttonDTO);
-                });
+        for (ButtonEnum value : ButtonEnum.values()) {
+            ButtonDTO buttonDTO = new ButtonDTO(value);
+            ConfigurationService.buttonList.add(buttonDTO);
+        }
 
         ViewUtils.setarVisualPadrao();
 

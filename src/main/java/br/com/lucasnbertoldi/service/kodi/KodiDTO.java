@@ -9,4 +9,9 @@ public class KodiDTO {
     protected int windowID;
     protected int speed;
 
+    @Override
+    public String toString() {
+        return "KodiDTO{" + "muted=" + muted + ", playerID=" + playerID + ", playerType=" + playerType + ", windowID=" + windowID + ", speed=" + speed + '}';
+    }
+    
 }

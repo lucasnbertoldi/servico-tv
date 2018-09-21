@@ -15,7 +15,7 @@ public class NumericKeyboardService {
     private static long lastTimeKeyPressed = 0;
     private static Robot robot;
 
-    public synchronized static void readKeyBoard(ButtonEnum button) {
+    public synchronized static void readKeyBoard(ButtonEnum button, KeyboardTypeEnum type) {
         if (CharacterEnum.isCharacter(button)) {
             try {
                 if (button.equals(lastButtonPressed)) {
@@ -31,10 +31,10 @@ public class NumericKeyboardService {
                 lastButtonPressed = button;
                 lastTimeKeyPressed = System.currentTimeMillis();
 
-                CharacterEnum character = CharacterEnum.valueOf(button, timesPressed);
+                CharacterEnum character = CharacterEnum.valueOf(button, timesPressed, type);
                 if (character != null) {
                     robot = new Robot();
-                    if (timesPressed >= 2) {
+                    if (timesPressed >= 2 && CharacterEnum.hasTimes(character)) {
                         robot.keyPress(KeyEvent.VK_BACK_SPACE);
                         robot.keyRelease(KeyEvent.VK_BACK_SPACE);
                         robot.delay(5);

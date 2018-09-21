@@ -15,7 +15,8 @@ public class KodiService {
 
     public boolean kodiIsOpen = false;
 
-    public void read(ButtonDTO buttonDTO) {
+    public boolean read(ButtonDTO buttonDTO) {
+        boolean read = true;
         switch (buttonDTO.getButtonEnum()) {
             case DOWN: {
                 makeRequest(SHOW_MESSAGE, new RequestKodiDTO(DOWN, "Botão Baixo", null));
@@ -42,6 +43,10 @@ public class KodiService {
                         }
                         break;
                     }
+                    case AUDIO_VIEW: {
+                         makeRequest(SHOW_MESSAGE, new RequestKodiDTO("Player.GoTo", "Música Anterior", "[" + kodiDTO.playerID + ",'previous']"));
+                        break;
+                    }
                     default: {
                         makeRequest(SHOW_MESSAGE, new RequestKodiDTO(LEFT, "Botão Esquerda", null));
                     }
@@ -63,6 +68,10 @@ public class KodiService {
                         if (speed <= MAX_SPEED) {
                             makeRequest(SHOW_MESSAGE, new RequestKodiDTO(SET_SPEED, "Diminuir Velocidade Reprodução", "[" + kodiDTO.playerID + "," + speed + "]"));
                         }
+                        break;
+                    }
+                                        case AUDIO_VIEW: {
+                         makeRequest(SHOW_MESSAGE, new RequestKodiDTO("Player.GoTo", "Música Anterior", "[" + kodiDTO.playerID + ",'next']"));
                         break;
                     }
                     default: {
@@ -143,9 +152,10 @@ public class KodiService {
                 break;
             }
             default: {
-
+                read = false;
             }
         }
+        return read;
     }
 
     public void sendAMessage(String message) {
@@ -230,6 +240,7 @@ public class KodiService {
             JSONObject results = new JSONObject(requestGuiProperties.response);
             kodiDTO.windowID = results.getJSONObject("currentwindow").getInt("id");
         }
+        System.out.println(kodiDTO);
     }
 
     private RequestKodiDTO[] checkMethodResponse(RespostaHTTP resposta, boolean showMessage, RequestKodiDTO... requests) {

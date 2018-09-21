@@ -6,6 +6,7 @@ import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
 import br.com.lucasnbertoldi.service.configuration.ButtonEnum;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import br.com.lucasnbertoldi.service.kodi.KodiService;
+import br.com.lucasnbertoldi.service.numerickeyboard.KeyboardTypeEnum;
 import br.com.lucasnbertoldi.service.numerickeyboard.NumericKeyboardService;
 import java.awt.AWTException;
 import java.awt.MouseInfo;
@@ -13,6 +14,8 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class SystemService {
 
@@ -26,6 +29,9 @@ public class SystemService {
     private static long lastTimeMousePressed = 0;
 
     private static long lastTimeOpenKodi = 0;
+
+    private static final int RANGE_VOLUME = 5;
+    private static int volume = 0;
 
     public static void readSystemCommand(ButtonDTO buttonSelected, KodiService kodiService) {
         switch (buttonSelected.getButtonEnum()) {
@@ -61,7 +67,17 @@ public class SystemService {
             case OK:
             case BACK:
             case BACKSPACE: {
-                executeRobot(buttonSelected.getButtonEnum());
+                executeRobot(buttonSelected.getButtonEnum(), kodiService);
+                break;
+            }
+            case VOLUME_DOWN: {
+                changeVolume(-RANGE_VOLUME);
+                showLOGController(ButtonEnum.VOLUME_DOWN.getDescription());
+                break;
+            }
+            case VOLUME_UP: {
+                changeVolume(RANGE_VOLUME);
+                showLOGController(ButtonEnum.VOLUME_UP.getDescription());
                 break;
             }
             case SWITCH_MODE: {
@@ -80,18 +96,61 @@ public class SystemService {
                             break;
                     }
                 }
-                SystemTrayUtils.showMessage("Mensagem", "Modo do controle alterado para " + mode.description + ".", "info");
+                showMessage("Modo do controle alterado para " + mode.description + ".", kodiService);
                 showLOGController(ButtonEnum.SWITCH_MODE.getDescription() + " - " + mode.description);
                 break;
             }
             default: {
-                NumericKeyboardService.readKeyBoard(buttonSelected.getButtonEnum());
+                NumericKeyboardService.readKeyBoard(buttonSelected.getButtonEnum(), mode == ModeButton.KEYBOARD_MODE ? KeyboardTypeEnum.LETTER : KeyboardTypeEnum.NUMBER);
             }
 
         }
     }
 
-    private synchronized static void executeRobot(ButtonEnum button) {
+    private static void changeVolume(int range) {
+        volume = volume + range;
+        if (volume < 0) {
+            volume = 0;
+        }
+        if (volume > 100) {
+            volume = 100;
+        }
+        if (ServicoLucasTV.SISTEMA.equals("Linux")) {
+            setLinuxVolume(volume);
+        } else if (ServicoLucasTV.SISTEMA.contains("Windows")) {
+            setWindowsVolume(volume);
+        }
+    }
+
+    public static void setLinuxVolume(int volume) {
+        Runtime rt = Runtime.getRuntime();
+        Process pr;
+        try {
+            String command = "amixer -D pulse sset Master " + volume + "%";
+            pr = rt.exec(command);
+        } catch (IOException ex) {
+            ServicoLucasTV.error("Erro ao modificar volume.", ex);
+        }
+    }
+
+    public static void setWindowsVolume(int volume) {
+
+        double endVolume = 655.35 * volume;
+
+        Runtime rt = Runtime.getRuntime();
+        Process pr;
+        try {
+            String nircmdFilePath = ConfigurationService.getSoftwareFolderName() + "\\nircmd\\nircmd.exe";
+            pr = rt.exec(nircmdFilePath + " setsysvolume " + endVolume);
+            pr = rt.exec(nircmdFilePath + " mutesysvolume 0");
+
+        } catch (IOException ex) {
+            ServicoLucasTV.error("Erro ao modificar volume.", ex);
+        }
+
+    }
+
+    private synchronized static void executeRobot(ButtonEnum button, KodiService kodi) {
         lastMouseButtonPressed = button;
         try {
             robot = new Robot();
@@ -195,7 +254,7 @@ public class SystemService {
             showLOGController(button.getDescription());
         } catch (AWTException ex) {
             ServicoLucasTV.error("Erro ao executar função Robot do Java", ex);
-            SystemTrayUtils.showMessage("Mensagem", "Erro ao Iniciar Robot do Java", "error");
+            showMessage("Erro ao Iniciar Robot do Java", kodi);
         }
     }
 
@@ -231,4 +290,11 @@ public class SystemService {
         public final String description;
     }
 
+    private static void showMessage(String message, KodiService kodi) {
+        if (kodi.kodiIsOpen) {
+            kodi.sendAMessage(message);
+        } else {
+            SystemTrayUtils.showMessage("Mensagem", message, "info");
+        }
+    }
 }

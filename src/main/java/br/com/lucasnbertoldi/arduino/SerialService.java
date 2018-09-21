@@ -49,9 +49,11 @@ public class SerialService {
                     }
                     if (!disabled) {
                         if (buttonSelected != null) {
+                            boolean kodyRead = false;
                             if (kodiService.kodiIsOpen) {
-                                kodiService.read(buttonSelected);
-                            } else {
+                                kodyRead = kodiService.read(buttonSelected);
+                            }
+                            if (!kodyRead) {
                                 SystemService.readSystemCommand(buttonSelected, kodiService);
                             }
                         }
