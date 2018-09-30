@@ -3,6 +3,7 @@ package br.com.lucasnbertoldi.arduino;
 import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.gui.SystemTrayUtils;
 import br.com.lucasnbertoldi.service.SystemService;
+import br.com.lucasnbertoldi.service.automation.AutomationService;
 import br.com.lucasnbertoldi.service.configuration.ButtonDTO;
 import br.com.lucasnbertoldi.service.configuration.ButtonEnum;
 import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
@@ -10,11 +11,16 @@ import br.com.lucasnbertoldi.service.kodi.KodiService;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class SerialService {
 
     public SerialPort comPort;
     public static boolean disabled = false;
+    private SerialService serialService;
 
     public void initialize(KodiService kodiService) {
         if (comPort != null) {
@@ -28,7 +34,11 @@ public class SerialService {
             ServicoLucasTV.error("Nenhuma porta serial encontrada.");
             return;
         }
+
         comPort.openPort();
+
+        serialService = this;
+
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
             public int getListeningEvents() {
@@ -55,6 +65,7 @@ public class SerialService {
                             }
                             if (!kodyRead) {
                                 SystemService.readSystemCommand(buttonSelected, kodiService);
+                                AutomationService.changeLightState(buttonSelected, serialService);
                             }
                         }
                     } else {
@@ -83,6 +94,14 @@ public class SerialService {
 
             }
         });
+    }
+
+    public void write(String code) {
+        try (OutputStream out = comPort.getOutputStream()) {
+            out.write(code.getBytes());
+        } catch (IOException ex) {
+            ServicoLucasTV.error("Erro ao enviar informação por serial.", ex);
+        }
     }
 
     private ButtonDTO read(String text) {

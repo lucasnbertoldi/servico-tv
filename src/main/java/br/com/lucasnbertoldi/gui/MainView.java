@@ -281,7 +281,7 @@ public class MainView extends javax.swing.JFrame {
                 showLogControllerCheckBoxActionPerformed(evt);
             }
         });
-        jPanel3.add(showLogControllerCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 252, -1, -1));
+        jPanel3.add(showLogControllerCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 252, 210, -1));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Delay para Abrir Kodi");
