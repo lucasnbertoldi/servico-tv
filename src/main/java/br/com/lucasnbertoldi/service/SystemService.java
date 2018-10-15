@@ -14,8 +14,6 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class SystemService {
 
@@ -82,22 +80,28 @@ public class SystemService {
             }
             case SWITCH_MODE: {
                 if (null == mode) {
-                    mode = ModeButton.MOUSE_WHEEL_MODE;
+                    changeMode(kodiService, ModeButton.MOUSE_WHEEL_MODE);
                 } else {
                     switch (mode) {
                         case KEYBOARD_MODE:
-                            mode = ModeButton.MOUSE_MODE;
+                            changeMode(kodiService, ModeButton.MOUSE_MODE);
                             break;
                         case MOUSE_MODE:
-                            mode = ModeButton.MOUSE_WHEEL_MODE;
+                            changeMode(kodiService, ModeButton.MOUSE_WHEEL_MODE);
                             break;
+                        case MOUSE_WHEEL_MODE: {
+                            if (kodiService.kodiIsOpen) {
+                                changeMode(kodiService, ModeButton.KODI_MODE);
+                            } else {
+                                changeMode(kodiService, ModeButton.KEYBOARD_MODE);
+                            }
+                            break;
+                        }
                         default:
-                            mode = ModeButton.KEYBOARD_MODE;
+                            changeMode(kodiService, ModeButton.KEYBOARD_MODE);
                             break;
                     }
                 }
-                showMessage("Modo do controle alterado para " + mode.description + ".", kodiService);
-                showLOGController(ButtonEnum.SWITCH_MODE.getDescription() + " - " + mode.description);
                 break;
             }
             default: {
@@ -105,6 +109,16 @@ public class SystemService {
             }
 
         }
+    }
+
+    public static void changeMode(KodiService kodiService, ModeButton mode) {
+        SystemService.mode = mode;
+        showMessage("Modo do controle alterado para " + mode.description + ".", kodiService);
+        showLOGController(ButtonEnum.SWITCH_MODE.getDescription() + " - " + mode.description);
+    }
+
+    public static ModeButton getMode() {
+        return SystemService.mode;
     }
 
     private static void changeVolume(int range) {
@@ -243,10 +257,8 @@ public class SystemService {
                     break;
                 }
                 case BACKSPACE: {
-                    if (mode.equals(ModeButton.KEYBOARD_MODE)) {
-                        robot.keyPress(KeyEvent.VK_BACK_SPACE);
-                        robot.keyRelease(KeyEvent.VK_BACK_SPACE);
-                    }
+                    robot.keyPress(KeyEvent.VK_BACK_SPACE);
+                    robot.keyRelease(KeyEvent.VK_BACK_SPACE);
                     break;
                 }
             }
@@ -280,8 +292,8 @@ public class SystemService {
         }
     }
 
-    private enum ModeButton {
-        KEYBOARD_MODE("Teclado"), MOUSE_MODE("Mouse"), MOUSE_WHEEL_MODE("Rodinha Mouse");
+    public enum ModeButton {
+        KEYBOARD_MODE("Teclado"), MOUSE_MODE("Mouse"), MOUSE_WHEEL_MODE("Rodinha Mouse"), KODI_MODE("Kodi");
 
         private ModeButton(String description) {
             this.description = description;

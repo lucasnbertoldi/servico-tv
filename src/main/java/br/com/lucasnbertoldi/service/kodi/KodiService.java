@@ -203,6 +203,7 @@ public class KodiService {
     public void updateProperties(boolean first) {
         if (first) {
             sendAMessage("O Serviço está executando.");
+            SystemService.changeMode(this, SystemService.ModeButton.KODI_MODE);
         }
 
         RequestKodiDTO requestPropery = new RequestKodiDTO(GET_PROPERTIES, "Recolher Propriedades", new JSONArray().put(0, new JSONArray().put(0, "volume").put(1, "muted")).toString());
@@ -240,7 +241,6 @@ public class KodiService {
             JSONObject results = new JSONObject(requestGuiProperties.response);
             kodiDTO.windowID = results.getJSONObject("currentwindow").getInt("id");
         }
-        System.out.println(kodiDTO);
     }
 
     private RequestKodiDTO[] checkMethodResponse(RespostaHTTP resposta, boolean showMessage, RequestKodiDTO... requests) {

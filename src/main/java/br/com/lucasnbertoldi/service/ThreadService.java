@@ -7,6 +7,7 @@ package br.com.lucasnbertoldi.service;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
 import br.com.lucasnbertoldi.arduino.SerialService;
+import br.com.lucasnbertoldi.service.SystemService.ModeButton;
 import br.com.lucasnbertoldi.service.kodi.KodiService;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -38,6 +39,7 @@ public class ThreadService extends Thread {
                     kodiService.updateProperties(mostrarPrimeiraMensagem);
                     if (!primeiraTentativaKodi) {
                         ServicoLucasTV.info("O KODI está novamente aberto e funcionando o/");
+                        SystemService.changeMode(kodiService, ModeButton.KODI_MODE);
                     }
                     kodiService.kodiIsOpen = true;
                     primeiraTentativaKodi = true;
@@ -46,10 +48,11 @@ public class ThreadService extends Thread {
                     kodiService.kodiIsOpen = false;
                     mostrarPrimeiraMensagem = true;
                     if (e.getCause() != null) {
-                        if (e.getCause() instanceof ConnectException ||  e.getCause() instanceof SocketTimeoutException) {
+                        if (e.getCause() instanceof ConnectException || e.getCause() instanceof SocketTimeoutException) {
                             if (primeiraTentativaKodi) {
                                 ServicoLucasTV.warning("Parece que o KODI está ou foi fechado :/");
                                 primeiraTentativaKodi = false;
+                                SystemService.changeMode(kodiService, ModeButton.KEYBOARD_MODE);
                             }
                         } else {
                             ServicoLucasTV.error("Erro ao consultar informações do KODI :/", e);

@@ -13,8 +13,6 @@ import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class SerialService {
 
@@ -60,7 +58,7 @@ public class SerialService {
                     if (!disabled) {
                         if (buttonSelected != null) {
                             boolean kodyRead = false;
-                            if (kodiService.kodiIsOpen) {
+                            if (SystemService.getMode().equals(SystemService.ModeButton.KODI_MODE)) {
                                 kodyRead = kodiService.read(buttonSelected);
                             }
                             if (!kodyRead) {
