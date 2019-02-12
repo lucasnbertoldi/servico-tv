@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.lucasnbertoldi</groupId>
     <artifactId>ServicoLucasTV</artifactId>
-    <version>1.0</version>
+    <version>3.1</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>

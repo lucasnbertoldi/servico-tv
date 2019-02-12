@@ -22,7 +22,7 @@ import javax.imageio.IIOException;
 
 public class ConfigurationService {
 
-    private static final String PATH_FILE = "/servico.properties";
+    private static final String PATH_FILE = "/.config-lucas-tv/servico.properties";
 
     private static ConfigurationDTO configuration;
 
@@ -39,7 +39,8 @@ public class ConfigurationService {
 
     public static void setConfiguration(ConfigurationDTO config, List<ButtonDTO> newButtonList) throws IOException {
 
-        String path = new File(getSoftwareFolderName()).getCanonicalPath();
+        File file = new File(getSoftwareFolderName());
+        String path = file.getCanonicalPath();
 
         Properties properties = new Properties();
 
