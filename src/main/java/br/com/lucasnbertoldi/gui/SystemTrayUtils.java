@@ -1,6 +1,7 @@
 package br.com.lucasnbertoldi.gui;
 
 import br.com.lucasnbertoldi.ServicoLucasTV;
+import br.com.lucasnbertoldi.service.configuration.ConfigurationService;
 import dorkbox.notify.Notify;
 import dorkbox.notify.Pos;
 import dorkbox.systemTray.MenuItem;
@@ -22,7 +23,7 @@ import org.apache.commons.io.IOUtils;
 public class SystemTrayUtils {
 
     public static final String PATH_ICONE_MENOR = "img/icone-menor.png";
-    
+
     private static Notify notify;
 
     public static void createSystemTrayIconDorkBox() {
@@ -37,7 +38,7 @@ public class SystemTrayUtils {
         }
 
         if (ServicoLucasTV.SISTEMA.equals("Linux")) {
-            systemTray.setImage(new File(ServicoLucasTV.PATH_PRINCIPAL_LINUX + PATH_ICONE_MENOR));
+            systemTray.setImage(new File(ConfigurationService.PATH_CONFIG + PATH_ICONE_MENOR));
         } else {
             systemTray.setImage(SystemTray.class.getResource("/" + PATH_ICONE_MENOR));
         }
@@ -115,7 +116,7 @@ public class SystemTrayUtils {
             byte[] imagebyte = null;
             try {
                 if (ServicoLucasTV.SISTEMA.equals("Linux")) {
-                    imagebyte = IOUtils.toByteArray(new FileInputStream(new File(ServicoLucasTV.PATH_PRINCIPAL_LINUX + "img/icone.png")));
+                    imagebyte = IOUtils.toByteArray(new FileInputStream(new File(ConfigurationService.PATH_CONFIG + "img/icone.png")));
                 } else {
                     imagebyte = IOUtils.toByteArray(java.awt.SystemTray.class.getResourceAsStream("/img/icone.png"));
                 }
@@ -136,7 +137,7 @@ public class SystemTrayUtils {
         }
     }
 
-    public static void  showMessage(String title, String text, String type) {
+    public static void showMessage(String title, String text, String type) {
         notify = Notify.create().text(text).title(title).onAction((Notify t) -> {
             ServicoLucasTV.mainView.setVisible(true);
         }).hideAfter(3000);

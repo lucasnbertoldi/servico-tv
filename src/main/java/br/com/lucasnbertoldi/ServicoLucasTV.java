@@ -15,7 +15,6 @@ public class ServicoLucasTV {
 
     public static MainView mainView;
     public static final Logger LOG = Logger.getLogger(ServicoLucasTV.class);
-    public static final String PATH_PRINCIPAL_LINUX = "/home/lucas/Serviço/";
     public static final String NOME_SOFTWARE = "Serviço Lucas TV";
     public static String SISTEMA = "";
 

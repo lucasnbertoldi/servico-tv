@@ -1,5 +1,6 @@
 package br.com.lucasnbertoldi.service.configuration;
 
+import br.com.lucasnbertoldi.ServicoLucasTV;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -22,7 +23,8 @@ import javax.imageio.IIOException;
 
 public class ConfigurationService {
 
-    private static final String PATH_FILE = "/.config-lucas-tv/servico.properties";
+    public static final String PATH_CONFIG = "/.config-servico-lucas-tv/";
+    private static final String PATH_FILE = PATH_CONFIG + "servico.properties";
 
     private static ConfigurationDTO configuration;
 
@@ -90,7 +92,6 @@ public class ConfigurationService {
             } catch (IOException ex) {
                 throw new RuntimeException("Erro ao encontrar o caminho do arquivo.", ex);
             }
-
             ConfigurationDTO config = new ConfigurationDTO();
 
             Properties properties = new Properties();

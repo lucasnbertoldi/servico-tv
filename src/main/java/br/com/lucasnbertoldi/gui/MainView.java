@@ -383,7 +383,7 @@ public class MainView extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         if (ServicoLucasTV.SISTEMA.equals("Linux")) {
             JFrame.setDefaultLookAndFeelDecorated(true);
-            ImageIcon icon = new ImageIcon(ServicoLucasTV.PATH_PRINCIPAL_LINUX + "img/icone-maior.png");
+            ImageIcon icon = new ImageIcon(ConfigurationService.PATH_CONFIG + "img/icone-maior.png");
             Image image = icon.getImage();
             setIconImage(image);
         } else {
@@ -431,7 +431,7 @@ public class MainView extends javax.swing.JFrame {
             newButtonDTO.setCodeList(buttonDTO.getTextCodeList());
             buttonList.add(newButtonDTO);
         }
-
+        buttonComboBox.removeAllItems();
         for (ButtonDTO buttonDTO : buttonList) {
             buttonComboBox.addItem(buttonDTO.getButtonEnum().getId() + " - " + buttonDTO.getButtonEnum().getDescription());
         }
