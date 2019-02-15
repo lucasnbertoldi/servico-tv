@@ -36,13 +36,7 @@ public class SystemTrayUtils {
         if (systemTray == null) {
             throw new RuntimeException("Unable to load SystemTray!");
         }
-
-        if (ServicoLucasTV.SISTEMA.equals("Linux")) {
-            systemTray.setImage(new File(ConfigurationService.PATH_CONFIG + PATH_ICONE_MENOR));
-        } else {
-            systemTray.setImage(SystemTray.class.getResource("/" + PATH_ICONE_MENOR));
-        }
-
+        systemTray.setImage(new File(ConfigurationService.getSoftwareFolderName() + ConfigurationService.PATH_CONFIG + PATH_ICONE_MENOR));
         systemTray.setStatus("Serviço Lucas TV");
         systemTray.setTooltip("Serviço Lucas TV");
 

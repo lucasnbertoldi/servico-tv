@@ -383,13 +383,10 @@ public class MainView extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         if (ServicoLucasTV.SISTEMA.equals("Linux")) {
             JFrame.setDefaultLookAndFeelDecorated(true);
-            ImageIcon icon = new ImageIcon(ConfigurationService.PATH_CONFIG + "img/icone-maior.png");
-            Image image = icon.getImage();
-            setIconImage(image);
-        } else {
-            setIconImage(new ImageIcon(getClass().getResource("/img/icone-maior.png")).getImage());
         }
-
+        ImageIcon icon = new ImageIcon(ConfigurationService.getSoftwareFolderName() + ConfigurationService.PATH_CONFIG + "img/icone-maior.png");
+        Image image = icon.getImage();
+        setIconImage(image);
     }//GEN-LAST:event_formComponentShown
 
     private void removeCodeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCodeButtonActionPerformed
